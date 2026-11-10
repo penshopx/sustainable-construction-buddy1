@@ -1,0 +1,265 @@
+FILE: 3._FORMAT_STANDAR_SKEMA_BERDASAR_PERMEN_6_TH_2026_1788185462022.pdf
+PAGES: 9
+METADATA: {'format': 'PDF 1.7', 'title': 'Microsoft PowerPoint - 3. FORMAT STANDAR SKEMA BERDASAR PERMEN 6 TH 2026', 'author': 'Vandy Rahmarta', 'subject': '', 'keywords': '', 'creator': '', 'producer': 'Microsoft: Print To PDF', 'creationDate': "D:20260831112238+07'00'", 'modDate': "D:20260831112238+07'00'", 'trapped': '', 'encryption': None}
+
+
+--- PAGE 1 ---
+FORMAT STANDAR SKEMA   
+Cieterep, 31 Agustus 2026
+berdasarkan PerMen PU Nomor 6 Tahun
+2025 dan Keputusan Direktur Jenderal Bina 
+Konstruksi Nomor 281/KPTS/DK/2026 
+LEMBAGA PENGEMBANGAN JASA KONSTRUKSI
+KEMENTERIAN PEKERJAAN UMUM
+Oleh : Pengurus LPJK Bidang IV
+
+--- PAGE 2 ---
+PROGRES LISENSI LSBU
+LEMBAGA PENGEMBANGAN JASA KONSTRUKSI
+KEMENTERIAN PEKERJAAN UMUM
+Ruang Lingkup Lisensi
+LSBU
+Jasa Konsultansi
+3
+20 Pekerjaan Konstruksi
+3
+Pekerjaan Konstruksi
+Terintegrasi
+KECIL
+MENENGAH
+BESAR
+SPESIALIS
+KECIL
+MENENGAH
+BESAR
+SPESIALIS
+BESAR
+1. Bangungan Gedung (GT), 2. Bangunan Sipil (ST)
+1. Bangunan Gedung (BG), 2. Bangunan Sipil (BS)
+1. Persiapan (PL), 2. Penyewaan 
+Peralatan (PA), 3. Konstruksi Khusus 
+(KK), 4. Konstruksi PraPabrikasi (KP), 
+5. Instalasi (IN), 6. Penyelesaian 
+Bangunan (PB)
+1. Arsitektur (AR), 2. Rekayasa (RK), 3. Rekayasa Terpadu (RT), 
+4. Arsitektur Lansekap dan Perencanaan Wilayah (AL)
+LPJK, 30 Agustus 2026
+1.Konsultansi Ilmiah dan 
+Teknis (IT), 
+2.Pengujian dan Analisis
+Teknis (AT)
+
+--- PAGE 3 ---
+HISTORI PENYESUAIAN SKEMA LSBU
+LEMBAGA PENGEMBANGAN JASA KONSTRUKSI
+KEMENTERIAN PEKERJAAN UMUM
+LPJK, 31 Juli 2025
+SE Menteri PUPR No 10 tahun 2021
+tanggal 7 Mei 2021 
+1
+2
+SE Menteri PUPR No 21 Tahun 2021
+Tanggal 25 November 2021 
+Penyesuaian skema sertifikasi dilakukan oleh LSBU ketika ada perubahan regulasi terkini terkait pengaturan tentang isi
+skema sertifikasi, seperti subklasifikasi SBU, kriteria persyaratan, bisnis proses dan lain-lain
+
+--- PAGE 4 ---
+HISTORI PENYESUAIAN SKEMA LSBU
+LEMBAGA PENGEMBANGAN JASA KONSTRUKSI
+KEMENTERIAN PEKERJAAN UMUM
+SK Dirjen Binkon No 144 tahun 2022 
+tanggal 21 September 2022 
+Diberlakukan tanggal 10 Oktober 2022
+SK Dirjen Binkon No 37 tahun 2025
+tanggal 20 Maret 2025
+Diberlakukan paling lambat 6 (enam) bulan sejak
+terbit (paling lama tanggal 19 Oktober 2025)
+3
+4
+
+--- PAGE 5 ---
+HISTORI PENYESUAIAN SKEMA LSBU
+LEMBAGA PENGEMBANGAN JASA KONSTRUKSI
+KEMENTERIAN PEKERJAAN UMUM
+SK Dirjen Binkon No 281 tahun 2026 
+tanggal 26 Agustus 2026
+Diberlakukan paling lambat 6 (enam) bulan sejak
+terbit (paling lama tanggal 25 Februari 2027)
+5
+ISU STRATEGIS IMPLEMENTASI
+Perlu diantisipasi seluruh pihak
+"1 Sistem" (SIJK Terintegrasi)
+Perubahan Kualifikasi Usaha
+Pemanfaatan dan Akuntabilitas SBU
+Dengan adanya perubahan kualifikasi usaha maka ruang lingkup
+lisensi juga disesuaikan, LPJK menerbitkan persetujuan skema dan 
+perubahan ruang lungkup pada dokumen Keputusan Lisensi. 
+Disamping itu, BUJK harus menyiapkan pemenuhan persyaratan
+(konversi, BO, Ekuitas, pengalaman dll)
+Kesiapan dan keandalan sistem yang disediakan termasuk
+penguasaan pengguna system (personil LSBU dan BUJK) 
+Terdapat masa transisi Dimana ada 2 jenis kualifikasi pada SBU 
+yang beredar. Maka perlu dipastikan OSS dan Pelaksanaan tender 
+dapat menerima 2 SBU tersebut
+Tantangan Kemampuan LSBU
+LSBU harus melakukan penyesuaian dokumen mutu, sarana dan 
+SDM sehingga skema dapat beroperasi tetap waktu
+
+--- PAGE 6 ---
+USULAN FORMAT STANDAR SKEMA SERTIFIKASI
+LEMBAGA PENGEMBANGAN JASA KONSTRUKSI
+KEMENTERIAN PEKERJAAN UMUM
+berdasarkan PerMen PU Nomor 6 Tahun 2025 dan Keputusan 
+Direktur Jenderal Bina Konstruksi Nomor 281/KPTS/DK/2026 
+JUMLAH SKEMA
+JUMLAH SKEMA
+Skema disusun Per Klasifikasi , sehingga
+dokumen skema per LSBU berjumlah:
+6 dokumen untuk LSBU Jasa Konsultansi
+8 dokumen untuk LSBU Pekerjaan
+Konstruksi
+2 dokumen untuk LSBU Pekerjaan
+Konstruksi Terintegrasi
+TEMPLATE SKEMA
+TEMPLATE SKEMA
+Template Skema disiapkan oleh LPJK, 
+sebagai acuan bagi LSBU menyusun
+Skema Sertifikasi dan penetapan skema
+di LSBU. Serta acuan LPJK dalam
+verifikasi permohonan persetujuan
+skema
+KAJI ULANG SKEMA
+KAJI ULANG SKEMA
+Perubahan skema sertifikasi dari SK 
+Dirjen no 37 tahun 2025 ke SK Dirjen no 
+281 tahun 2026  tetap melalui proses 
+kaji ulang skema sebagaimana
+ketentuan yang diatur dalam:
+Klausul 11 (Pemeliharaan Skema 
+Sertifikasi) SK Dirjen No 281 Tahun
+2026.
+PENGENDALIAN
+DOKUMEN SKEMA
+PENGENDALIAN
+DOKUMEN SKEMA
+Memperhatikan perubahan dokumen
+skema semula per SBU menjadi per 
+klasifikasi maka nomor dokumen skema
+dapat menggunakan nomor baru
+PERSETUJUAN SKEMA
+PERSETUJUAN SKEMA
+Permohonan dan persetujuan skema
+diusulkan secara bersamaan seluruh
+SLBU sesuai jadwal yang ditetapkan LPJK. 
+PENGOPERASIAN SKEMA
+PENGOPERASIAN SKEMA
+Pengoperasian skema oleh LSBU berdasar
+Permen PU no 6 tahun 2025 dan SK Dirjen no 
+281 tahun 2026, dilaksanakan paling lambat
+25 Februari 2027 setelah apliasi siap serta
+SDM dan ketentuan biaya tersedia
+
+--- PAGE 7 ---
+USULAN TIMELINE PERSETUJUAN SKEMA
+LEMBAGA PENGEMBANGAN JASA KONSTRUKSI
+KEMENTERIAN PEKERJAAN UMUM
+berdasarkan PerMen PU Nomor 6 Tahun 2025 dan Keputusan 
+Direktur Jenderal Bina Konstruksi Nomor 281/KPTS/DK/2026 
+Penerbitan Surat 
+LPJK tindak lanjut
+SK DIRJEN No 281 
+Tahun 2026
+Permohonan
+Persetujuan
+02
+03
+04
+01
+Verifikasi
+LPJK menerbitkan surat
+terkait persetujuan skema
+sertifikasi beserta jadwal
+pelaksanaan
+LSBU melakukan kaji ulang, 
+menyusun skema sesuai SK 
+Dirjen No 281 Tahun 2026 dan 
+menyampaikan permohonan
+persetujuan ke LPJK
+LPJK melakuan verifikasi
+Skema. Untuk yang 
+belum memenuhi, LSBU
+dapat melakukan
+perbaikan
+LPJK menerbitkan
+persetujuan skema berupa
+surat persetujuan skema
+dan Perubahan lingkup
+pada SK Keputusan Lisensi
+Persetujuan
+Dipercepat Desember
+2026 atau paling lama 
+tanggal 25 Februari 2027
+September 2026
+September – Oktober 
+2026
+November – Desember
+2026
+
+--- PAGE 8 ---
+USULAN TIMELINE IMPLEMENTASI
+LEMBAGA PENGEMBANGAN JASA KONSTRUKSI
+KEMENTERIAN PEKERJAAN UMUM
+berdasarkan PerMen PU Nomor 6 Tahun 2025 dan Keputusan 
+Direktur Jenderal Bina Konstruksi Nomor 281/KPTS/DK/2026 
+Regulasi
+Kesiapan Aplikasi
+Implementasi
+Skema Sertifikasi & 
+Asesor
+Pelatihan dan 
+Sosialisasi
+Penetapan peraturan
+biaya, konversi, MDP
+serta peraturan jadwal
+implementasi
+Memastikan keandalan
+SIJKT:
+-
+Kecukupan Kapasitas
+-
+Integrasi 
+-
+Uji Coba
+SBU sesuai Permen 6 
+tahun 2025 diterbitkan
+Penyusunan dan 
+persetujuan skema
+sertifikasi serta pelatihan
+ABUJK
+Pelatihan kepada personal 
+LSBU yang terlibat sertifikasi
+dan sosialisasi kepada BUJK
+STEP 01
+STEP 02
+STEP 03
+STEP 04
+STEP 05
+paling lama 
+tanggal 25 Februari 2027
+paling lama 
+tanggal Desember 2026
+paling cepat
+tanggal Desember 2026
+paling Cepat
+tanggal Desember 2026
+
+--- PAGE 9 ---
+www.lpjk.pu.go.id
+@pu_lpjk
+sekretariatlpjk@pu.go.id
+158 (Call Center)
+0815 1000 0158 (WhatsApp Center) Layanan No. 1
+Terima Kasih
+LEMBAGA PENGEMBANGAN JASA KONSTRUKSI
+KEMENTERIAN PEKERJAAN UMUM
+JL. WIJAYA I NO. 68 KEBAYORAN BARU, JAKARTA SELATAN, INDONESIA, 12110

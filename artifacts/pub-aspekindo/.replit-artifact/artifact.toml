@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "PUB ASPEKINDO"
+description = "Aplikasi web PUB ASPEKINDO untuk menyajikan informasi organisasi dan layanan kepada anggota serta pengunjung."
+version = "1.0.0"
+id = "artifacts/pub-aspekindo"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24594
+
+[services.development]
+run = "pnpm --filter @workspace/pub-aspekindo run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/pub-aspekindo", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/pub-aspekindo/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24594"
+BASE_PATH = "/"

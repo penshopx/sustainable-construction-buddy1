@@ -1,0 +1,44 @@
+- [Batas klaim PUB ASPEKINDO](pub-claim-boundaries.md) — bedakan fitur aktif, rujukan eksternal, dan roadmap; platform membantu persiapan, bukan keputusan resmi.
+- [Prioritas hasil assessment](assessment-profile-precedence.md) — profil mengikuti assessment selesai yang dimulai paling baru, bukan transaksi yang commit paling akhir.
+- [Daftar soal assessment](assessment-question-roster.md) — daftar tetap disahkan saat mulai; assessment lama tanpa bukti daftar server harus dimulai ulang.
+- [Diagnostik subproses terbatas](bounded-subprocess-diagnostics.md) — samarkan kredensial sebelum memotong output akhir; sisakan overlap untuk nilai yang melintasi batas.
+- [Playwright di Nix](playwright-nix.md) — browser unduhan dapat gagal memuat pustaka native meski instalasinya berhasil; bedakan lingkungan lokal dari CI Ubuntu.
+- [Jam palsu dan animasi browser](playwright-clock-animation.md) — percepatan jam penuh dapat menahan transisi animasi; gunakan interval terbatas untuk pengujian timer beranimasi.
+- [Jaringan offline dan fixture browser](playwright-offline-fixtures.md) — respons route.fulfill dapat melewati mode offline; buktikan kegagalan jaringan browser, bukan hanya indikator UI.
+- [Tipe plugin Vite di pnpm](vite-peer-types.md) — versi Vite sama dapat menghasilkan tipe tidak cocok bila peer opsionalnya berbeda antar artefak.
+- [Isolasi cache Vite pengujian](vite-test-cache-isolation.md) — cache server SSR pengujian harus terpisah dari preview agar optimasi dependensi tidak memicu 504.
+- [Uji proyek lama di luar workspace](legacy-test-dependencies.md) — pengujian skrip migrasi memerlukan dependensi sendiri; paket workspace utama tidak otomatis tersedia.
+- [Status workflow dan port aktif](workflow-port-state.md) — status failed bisa berasal dari start ganda meski preview masih sehat; periksa port dan proxy sebelum memperbaiki aplikasi.
+- [Privasi draf assessment](assessment-draft-privacy.md) — simpan jawaban sementara di ruang khusus pemilik, bukan kolom hasil pre-test yang bisa dibaca peran admin.
+- [Pilihan assessment lintas perangkat](assessment-concurrent-choices.md) — gabungkan soal berbeda; konflik pada soal sama memerlukan pilihan anggota, tanpa memperpanjang batas waktu.
+- [Logout di perangkat bersama](assessment-shared-device-logout.md) — utamakan penghapusan semua cadangan draf lokal saat logout, termasuk penulisan tertunda, walau progres offline bisa hilang.
+- [Batas tunggu logout](logout-timeout-safety.md) — timeout UI bukan akhir operasi SDK; tahan login baru dan gabungkan retry sampai operasi lama selesai.
+- [Drift migrasi Supabase](supabase-migration-drift.md) — migrasi dalam repositori belum tentu pernah diterapkan ke database hosted; periksa definisi fungsi aktif sebelum membungkusnya.
+- [Uji RPC LMS terisolasi](lms-rpc-isolated-tests.md) — skema PostgreSQL minimal menguji fungsi asli tanpa data hosted, tetapi bukan pengganti uji skema Supabase lengkap.
+- [Bobot nilai kuis LMS](lms-quiz-weight-policy.md) — points adalah bobot; kelulusan memakai persentase bulat, tanpa menghitung ulang hasil historis.
+- [Perubahan kuis terbit](lms-published-quiz-mutations.md) — nilai opsi+kunci sebagai satu perubahan atomik; pengaman editor tidak menggantikan perlindungan transaksi database.
+- [Runtime Supabase lokal](local-supabase-runtime.md) — Docker tersedia belum menjamin Auth/gateway siap; kegagalan health-check bukan hasil pengujian HTTP.
+- [Pemulihan tautan video LMS](lms-video-recovery.md) — tautan kedaluwarsa tidak perlu mengganti sumber yang masih lancar; pulihkan hanya bila pemutaran benar-benar terhenti.
+- [Cakupan advisori SheetJS](sheetjs-advisory-scope.md) — rentang advisori npm dapat menandai rilis CDN yang sudah ditambal; verifikasi vendor, bukan menekan seluruh aturan.
+- [Arah model AI aplikasi](application-ai-direction.md) — Claude untuk otak utama; chat harian dapat memakai GPT, DeepSeek, model NVIDIA, atau Gemini.
+- [Distribusi runtime Hermes](hermes-runtime-packaging.md) — jangan mengasumsikan Hermes dapat dipasang sebagai SDK Python biasa; periksa distribusi resmi dan batas runtime.
+- [Privasi pilot agen](agent-pilot-privacy.md) — izin pilot hanya preview baca-saja; orkestrasi SDK tidak memberi izin meneruskan seluruh konteks atau kunci provider.
+- [Uji pilot terautentikasi](authenticated-pilot-checks.md) — gunakan hasil API dalam sesi operator; jangan samakan HTTP 200 atau batas waktu klien dengan hasil skenario.
+- [Tooling dokumen offline](offline-document-tooling.md) — pemasang alat Python dapat membuat scaffolding; pisahkan konversi dokumen dari runtime Node.
+- [Bukti kutipan knowledge base](knowledge-citation-evidence.md) — ID dokumen yang benar belum membuktikan halaman relevan; uji teks bukti setelah pemangkasan konteks.
+- [Harness bukan Hermes](harness-terminology.md) — “Harnes” sebagai colokan/penghubung berarti lapisan harness; jangan otomatis menafsirkannya sebagai Hermes AI.
+- [Tujuan rilis produksi](production-release-target.md) — ref disahkan pemilik untuk konfigurasi produksi; izin tersebut bukan izin publikasi.
+- [Ruang Simpan sebagai acuan PUB](ruang-simpan-product-scope.md) — sumber kebenaran utama untuk PUB ASPEKINDO, bukan produk terpisah; tidak terintegrasi ke Gustafta.
+- [Batas keluaran OpenRouter](openrouter-output-budget.md) — uji kecil dapat berhasil meski batas keluaran aplikasi ditolak 402; cocokkan model dan max_tokens saat diagnosis.
+- [Badan request Orval](orval-inline-body-exports.md) — pakai skema input bernama agar tipe badan inline tidak bertabrakan dengan validator Zod dalam barrel.
+- [Batas penyedia OCR](document-ocr-provider-boundary.md) — engine PDF bawaan dapat menambah penerima dokumen; kunci engine/provider sesuai persetujuan.
+- [Buffer pada parser PDF lama](legacy-pdf-buffer-semantics.md) — PDF.js lama dapat menolak PDF valid bila menerima Buffer Node; pakai salinan Uint8Array.
+- [Privasi impor tautan](vault-link-import-policy.md) — simpan salinan privat dan nama file aman, bukan URL sumber yang mungkin membawa token sementara.
+- [Urutan validasi TypeScript](typescript-reference-validation-order.md) — deklarasi library yang tertinggal dapat membuat typecheck paket gagal meski ekspor sumber tersedia.
+- [Batas riwayat klinik](clinic-history-boundaries.md) — audit tanpa konteks Ruang Simpan; balasan lama menjadi snapshot dengan pengubah tidak diketahui, bukan riwayat rekaan.
+- [Perilaku media native](native-media-recovery.md) — Chromium menyambung respons terpotong lewat Range; load tidak selalu mengirim pause, dan play bisa ditolak karena jaringan.
+- [Bukti uji balapan izin](permission-race-test-evidence.md) — amati juga konsumen izin yang bertahan setelah navigasi agar unmount tidak menghasilkan kelulusan semu.
+- [Batas kuota AI anggota](ai-member-quota-boundary.md) — kuota pribadi bukan saldo provider; server tetap berwenang tanpa penggantian model atau pemendekan jawaban otomatis.
+- [Privasi diagnostik AI admin](admin-ai-diagnostic-privacy.md) — cache metadata tidak membuktikan izin; panduan hanya dari kode aman, bukan respons penyedia.
+- [Cakupan analisis dokumen panjang](document-analysis-coverage-policy.md) — penggabungan lokal menjaga temuan akhir; tiap bagian berbayar eksplisit, kelengkapan ekstraksi terpisah.
+- [Prasyarat navigasi uji Auth](auth-test-preconditions.md) — tuntaskan redirect/onboarding akun disposable sebelum menilai request privat; suffix URL dapat cocok dengan parameter redirect.

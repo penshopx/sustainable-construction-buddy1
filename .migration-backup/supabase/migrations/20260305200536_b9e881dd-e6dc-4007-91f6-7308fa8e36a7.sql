@@ -1,0 +1,1 @@
+ALTER TABLE public.e_course_modules ADD COLUMN job_segment text NOT NULL DEFAULT '';

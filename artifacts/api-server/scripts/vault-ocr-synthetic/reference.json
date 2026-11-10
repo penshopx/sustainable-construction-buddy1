@@ -1,0 +1,32 @@
+{
+  "certificate": {
+    "pages": [{
+      "page": null,
+      "text": "SERTIFIKAT SINTETIS\nNomor UJI-7319\nNilai Rp 815 juta\nPelatihan keselamatan kerja telah selesai.\nDokumen ini bukan data anggota.\nAKHIR SERTIFIKAT",
+      "evidence": ["Nomor UJI-7319", "Nilai Rp 815 juta", "Pelatihan keselamatan kerja telah selesai", "AKHIR SERTIFIKAT"]
+    }]
+  },
+  "indonesia": {
+    "pages": [{
+      "page": null,
+      "text": "CATATAN PEMERIKSAAN SINTETIS\nPekerjaan: pemeliharaan jembatan\nPengujian dilaksanakan pada 17 Agustus 2026.\nPersyaratan: keselamatan, kelayakan, dan ketelitian.\nBiaya pemeriksaan Rp 1.275.000.\nStatus: belum disetujui.\nAKHIR CATATAN",
+      "evidence": ["pemeliharaan jembatan", "17 Agustus 2026", "Rp 1.275.000", "belum disetujui", "AKHIR CATATAN"]
+    }]
+  },
+  "table": {
+    "pages": [{
+      "page": null,
+      "text": "TABEL ANGGARAN SINTETIS\nUraian Jumlah Nilai rupiah\nSemen 12 780.000\nBaja 7 1.925.000\nPasir 5 625.000\nAKHIR TABEL",
+      "evidence": ["Semen 12 780.000", "Baja 7 1.925.000", "Pasir 5 625.000", "AKHIR TABEL"]
+    }]
+  },
+  "multipage": { "pages": [
+    { "from": "certificate", "page": 1 },
+    { "from": "indonesia", "page": 2 },
+    { "from": "table", "page": 3 }
+  ] },
+  "selected": { "pages": [
+    { "from": "indonesia", "page": 2 },
+    { "from": "table", "page": 3 }
+  ] }
+}

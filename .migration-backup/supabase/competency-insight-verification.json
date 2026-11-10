@@ -1,0 +1,25 @@
+{
+  "projectRef": "yidlglstzvizsszrpobi",
+  "functionName": "competency-insight",
+  "functionStatus": "ACTIVE",
+  "functionVersion": 16,
+  "verifyJwt": true,
+  "contractSchemaVersion": "pub-siap-v1",
+  "authenticatedProbe": {
+    "httpStatus": 200,
+    "source": "connected",
+    "recommendationCount": 3,
+    "checkedAt": "2026-09-01T23:24:56Z"
+  },
+  "securityAssertions": {
+    "unauthenticatedStatus": 401,
+    "unauthenticatedHealthStatus": 401,
+    "memberHealthStatus": 403,
+    "adminHealthStatus": 200,
+    "memberIdentitySentToEngine": false,
+    "outputRestrictedToInternalCatalog": true,
+    "engineNameShownToMembers": false,
+    "sensitiveValuesShownInResponsesOrProbeLog": false,
+    "temporaryUserDeleted": true
+  }
+}

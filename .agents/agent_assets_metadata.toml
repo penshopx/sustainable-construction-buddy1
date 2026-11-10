@@ -1,0 +1,296 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "biWgM9bzbP9mZaj86sIMN"
+uri = "file://deliverables/summary-eksekutif-pub-aspekindo.html"
+type = "html"
+title = "Summary Eksekutif PUB ASPEKINDO"
+description = "Bahan pre-read dalam Bahasa Indonesia yang merangkum tujuan, modul utama, nilai strategis, tata kelola, dan rekomendasi pilot PUB ASPEKINDO."
+logical_id = "4f201027-f1b5-40ff-b4ef-e88ee3491083"
+content_hash = "sha256:ee1868fcc62d8f095707d47326b237618db5c20fb671ad99d1d6732c378b1e0f"
+size = 4569
+mtime_ms = 1788801491008
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:0bf1f3c7-899a-4fa8-a323-4cda600b8c0d/4f201027-f1b5-40ff-b4ef-e88ee3491083/4db2d2da-1664-430d-a1f2-5f4057bf8879"
+storage_version_token = "1788801681950221"
+content_type = "text/html"
+
+[[outputs]]
+id = "7aHYgs0389_1wMnPj0SSk"
+uri = "file://deliverables/summary-eksekutif-pub-aspekindo.md"
+type = "text"
+title = "Summary Eksekutif PUB ASPEKINDO — Markdown"
+description = "Versi teks yang mudah diedit, disalin, atau dikembangkan kembali."
+logical_id = "3134b8d8-73c5-4f36-add7-5bcae4b2905f"
+content_hash = "sha256:d1ff2a1389f8c1f2b96962c9aecd443a799eceb6e8cccdf0dbcaca2e292b2b79"
+size = 3337
+mtime_ms = 1788801890878
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:0bf1f3c7-899a-4fa8-a323-4cda600b8c0d/3134b8d8-73c5-4f36-add7-5bcae4b2905f/3c6a1023-0770-4dce-8f03-16d6545a6266"
+storage_version_token = "1788801906543767"
+content_type = "text/markdown"
+
+[[outputs]]
+id = "KeW3nCl-YLODzMRrMr9SG"
+uri = "file://deliverables/summary-eksekutif-pub-aspekindo.pdf"
+type = "pdf"
+title = "Summary Eksekutif PUB ASPEKINDO — PDF"
+description = "Versi PDF 4 halaman yang siap dibagikan atau dicetak."
+logical_id = "5467cf29-d041-4c86-8d87-63a9930b5e60"
+content_hash = "sha256:b5c4c893691445b9cb8f859143007194e6c51cc753c717f9d4fc42a7b929a757"
+size = 57349
+mtime_ms = 1788801898382
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:0bf1f3c7-899a-4fa8-a323-4cda600b8c0d/5467cf29-d041-4c86-8d87-63a9930b5e60/8daaa10c-d45e-44b1-b87f-15788e31b31a"
+storage_version_token = "1788801907841970"
+content_type = "application/pdf"
+
+[[outputs]]
+id = "cxIpjUBfjZ2YWjEI_qqNm"
+uri = "file://.local/outputs/Presentasi-Lengkap-PUB-ASPEKINDO.pdf"
+type = "pdf"
+title = "Presentasi Lengkap PUB ASPEKINDO (PDF)"
+description = "Deck lengkap 18 slide untuk presentasi kepada anggota ASPEKINDO."
+logical_id = "c41e4c5a-bc83-4393-9dda-280de5e77346"
+content_hash = "sha256:6a46aac692ceecc9adb1dc770416321c025f1a9a824018344ad0e3eb1a7e9c1a"
+size = 1563419
+mtime_ms = 1788802207249
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:0bf1f3c7-899a-4fa8-a323-4cda600b8c0d/c41e4c5a-bc83-4393-9dda-280de5e77346/0b75bb95-ab0a-40cf-a6e3-5266285b7af5"
+storage_version_token = "1788802209116143"
+content_type = "application/pdf"
+
+[[outputs]]
+id = "61ELD4aIp8YPz3jowOzpH"
+uri = "file://.local/outputs/Presentasi-Lengkap-PUB-ASPEKINDO---Revisi.pdf"
+type = "pdf"
+title = "Presentasi Lengkap PUB ASPEKINDO — Revisi (PDF)"
+description = "PDF 18 slide dengan landasan regulasi, nomenklatur ekosistem, dan 4 SIAP yang telah diperbarui."
+logical_id = "4097508a-34ec-47ea-bde8-0d191f2df85b"
+content_hash = "sha256:faa2420727acc08a30e9e77b3747d3b542eedb7e7c10e50355bde5fa5122d822"
+size = 1585221
+mtime_ms = 1788847024436
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:0bf1f3c7-899a-4fa8-a323-4cda600b8c0d/4097508a-34ec-47ea-bde8-0d191f2df85b/5e8b64e8-767f-48d2-8084-8cedc969d223"
+storage_version_token = "1788847026124583"
+content_type = "application/pdf"
+
+[[outputs]]
+id = "b3K8w0bSbb410wk1vciX-"
+uri = "file://.local/outputs/PUB-ASPEKINDO-Versi-Ringkas.pptx"
+type = "slides"
+title = "PUB ASPEKINDO — Versi Ringkas (PPTX)"
+description = "Presentasi ringkas 6 slide dalam format PowerPoint, siap dibagikan dan dipresentasikan."
+logical_id = "4cee9da1-6bcf-4105-a4a1-37ad7288be10"
+content_hash = "sha256:7fa7e8e94109dca10d124a9c70b946283b1443719750fd82e754fb1aba63dfa8"
+size = 5906856
+mtime_ms = 1788847287423
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:0bf1f3c7-899a-4fa8-a323-4cda600b8c0d/4cee9da1-6bcf-4105-a4a1-37ad7288be10/d21f8bac-477a-4eff-9562-99b94a1efa28"
+storage_version_token = "1788847326453497"
+content_type = "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+
+[[outputs]]
+id = "oCYUPPRA6f5AaNlYmdFgM"
+uri = "file://.local/outputs/PUB-ASPEKINDO-Versi-Ringkas.pdf"
+type = "pdf"
+title = "PUB ASPEKINDO — Versi Ringkas (PDF)"
+description = "Presentasi ringkas 6 halaman dalam format PDF, siap dibagikan atau dicetak."
+logical_id = "cf639f60-93b5-43ea-a5a4-7bb1dfab0997"
+content_hash = "sha256:87e694d54d230feb97e878414f78d8d3bbb1620bac0fce940810155534bdc815"
+size = 752898
+mtime_ms = 1788847289615
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:0bf1f3c7-899a-4fa8-a323-4cda600b8c0d/cf639f60-93b5-43ea-a5a4-7bb1dfab0997/44d66805-341b-45f6-b3c3-9dc9f1870fa2"
+storage_version_token = "1788847327756746"
+content_type = "application/pdf"
+
+[[outputs]]
+id = "HdbiiFy6SvoIR3mQ6j2xa"
+uri = "file://deliverables/catatan-review-materi-pub-aspekindo.md"
+type = "text"
+title = "Catatan Review Materi PUB ASPEKINDO"
+description = "Catatan per slide mengenai bagian yang sesuai, klaim yang perlu diturunkan, serta rumusan pengganti yang lebih akurat terhadap aplikasi saat ini."
+logical_id = "556eff81-6e68-436b-a8f6-b56f3e9945a8"
+content_hash = "sha256:25ddf65c5ed7b4dfc47dcd6b4478457bf62c95f7aec66613c9fbced15dc96eb2"
+size = 12371
+mtime_ms = 1789015155368
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:b0322143-bf61-4155-9a2c-fe262c6ae4a9/556eff81-6e68-436b-a8f6-b56f3e9945a8/6440dac7-bbfe-4d90-8c22-fb580a939ef6"
+storage_version_token = "1789015265864808"
+content_type = "text/markdown"
+
+[[outputs]]
+id = "eJhfU3db5vr62GGE_f-Nj"
+uri = "file://deliverables/panduan-pengguna-pub-aspekindo.pdf"
+type = "pdf"
+title = "Panduan Pengguna PUB ASPEKINDO"
+description = "Panduan siap cetak untuk sosialisasi: akun, dashboard, assessment, LMS, 4 SIAP, proyek, LKUT, SMAP/PANCEK, serta sinkronisasi dan integrasi."
+logical_id = "561aa062-97d1-4bb9-8544-d875d4a5252b"
+content_hash = "sha256:326d41a6dcccd41b6fa3d512166196f57dc8fa4b3307f273964c7713166f2c70"
+size = 461491
+mtime_ms = 1789029482524
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:b0322143-bf61-4155-9a2c-fe262c6ae4a9/561aa062-97d1-4bb9-8544-d875d4a5252b/cd098da9-80f2-4c78-bfc8-80ec2ec2efd6"
+storage_version_token = "1789029518147417"
+content_type = "application/pdf"
+
+[[outputs]]
+id = "3MZ1Qi6-Ip1gArZOtIukc"
+uri = "file://deliverables/panduan-pengguna-pub-aspekindo.html"
+type = "html"
+title = "Panduan PUB ASPEKINDO — Versi Web"
+description = "Versi interaktif dengan daftar isi yang dapat diklik dan tampilan responsif untuk dibuka di komputer atau ponsel."
+logical_id = "d1407289-711d-4a7b-bb55-347c5f7f7a25"
+content_hash = "sha256:43de499564e4937395501759bfb17e45e72452b51f0a80e8ca9f6a0f08a78dee"
+size = 36685
+mtime_ms = 1789029457164
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:b0322143-bf61-4155-9a2c-fe262c6ae4a9/d1407289-711d-4a7b-bb55-347c5f7f7a25/73c343a8-a9fe-4a06-9968-e5f8048298a8"
+storage_version_token = "1789029519445132"
+content_type = "text/html"
+
+[[outputs]]
+id = "9EOcw9I_j_Vb4zJsmMI6O"
+uri = "file://deliverables/manual-lengkap-pub-aspekindo.pdf"
+type = "pdf"
+title = "Unduh Panduan Lengkap PUB ASPEKINDO — 42 Halaman"
+description = "PDF A4 gabungan: 20 halaman panduan anggota dan 22 halaman panduan Admin/Operator. Ukuran 720 KB."
+logical_id = "e8b22516-1d88-459a-a71e-4225cc8968bc"
+content_hash = "sha256:cab3e86838097cfd6419977df7ca4acc49692a830f042cf2550c64d30d2ae7df"
+size = 736486
+mtime_ms = 1789030250324
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:b0322143-bf61-4155-9a2c-fe262c6ae4a9/e8b22516-1d88-459a-a71e-4225cc8968bc/38df84bf-8ebe-4dcb-91dc-098a769d653f"
+storage_version_token = "1789031110239995"
+content_type = "application/pdf"
+
+[[outputs]]
+id = "57xe0uMBvdYjVcDoLb-dO"
+uri = "file://deliverables/panduan-admin-operator-pub-aspekindo.pdf"
+type = "pdf"
+title = "Panduan Admin & Operator PUB ASPEKINDO"
+description = "Manual A4 22 halaman untuk pengelolaan akses, konten, LMS, PANCEK, marketplace, laporan, publikasi, dan penanganan insiden."
+logical_id = "91cfbae2-0afb-48d0-ae07-b12d3b7cde07"
+content_hash = "sha256:4919ba62a43babfa41270419f9449516cfbc372e2767cc417faec803568ba037"
+size = 482614
+mtime_ms = 1789030249590
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:b0322143-bf61-4155-9a2c-fe262c6ae4a9/91cfbae2-0afb-48d0-ae07-b12d3b7cde07/66efab8f-b603-45db-a882-5ceb375f0978"
+storage_version_token = "1789030262340433"
+content_type = "application/pdf"
+
+[[outputs]]
+id = "OhgfN_YzEIYuMEQQqG8-G"
+uri = "file://deliverables/panduan-admin-operator-pub-aspekindo.html"
+type = "html"
+title = "Panduan Admin & Operator — Versi Web"
+description = "Versi interaktif dan responsif dengan daftar isi yang dapat diklik."
+logical_id = "d9194074-93df-4e18-9be8-d835c632c369"
+content_hash = "sha256:f63ee88820748d09b30f470ed1aa0896eaa2e556a6d6b21bb9ba4f2630377a92"
+size = 28528
+mtime_ms = 1789030230308
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:b0322143-bf61-4155-9a2c-fe262c6ae4a9/d9194074-93df-4e18-9be8-d835c632c369/ec737724-baf4-4ac2-9f9c-418ded199208"
+storage_version_token = "1789030263615897"
+content_type = "text/html"
+
+[[outputs]]
+id = "gcBw7VyylMuVZ_O4Qocis"
+uri = "file://deliverables/draft-surat-pengantar-sosialisasi-pub-aspekindo.pdf"
+type = "pdf"
+title = "Draft Surat Pengantar Sosialisasi PUB ASPEKINDO"
+description = "Versi PDF A4 dua halaman, siap ditinjau dan dipindahkan ke kop surat resmi DPP ASPEKINDO."
+logical_id = "e4f77b64-3ef8-4c04-a313-4cb1ab476fd2"
+content_hash = "sha256:85ac1afe7647b8e1ce4ca438c47e8fb5aca25908ed98a552bbf01036d11d7277"
+size = 71905
+mtime_ms = 1789033081589
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:b0322143-bf61-4155-9a2c-fe262c6ae4a9/e4f77b64-3ef8-4c04-a313-4cb1ab476fd2/4381546e-5bb4-4b59-a378-7cd92e5164c6"
+storage_version_token = "1789033089838175"
+content_type = "application/pdf"
+
+[[outputs]]
+id = "uby80r1Zz3ncJLNzB2DHz"
+uri = "file://deliverables/draft-surat-pengantar-sosialisasi-pub-aspekindo.html"
+type = "html"
+title = "Draft Surat Sosialisasi — Versi Dapat Disunting"
+description = "Versi HTML yang dapat disunting untuk mengisi nomor surat, tanggal, narahubung, lampiran, dan pejabat penandatangan."
+logical_id = "cfd9b2af-5463-4be4-9b26-55344b07ce0b"
+content_hash = "sha256:717c777f5c618a0cd476245f2cbad9ae2f4b2c4192be02b2f3da9d7d9d9480b2"
+size = 6481
+mtime_ms = 1789033073511
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:b0322143-bf61-4155-9a2c-fe262c6ae4a9/cfd9b2af-5463-4be4-9b26-55344b07ce0b/c220beb1-ad9a-4131-9fb9-c3408fc9433d"
+storage_version_token = "1789033091153429"
+content_type = "text/html"
+
+[[outputs]]
+id = "mlSeWLBHq3A2h3wSj29m8"
+uri = "file://generated-artifacts/scheme-matrix/matriks-skema-konstruksi.html"
+type = "html"
+title = "Matriks 77 Subklasifikasi — Laporan Peninjauan"
+description = "Draf matriks yang dapat dicari dan difilter, berisi ruang lingkup, rujukan persyaratan, serta perbedaan sumber. Belum terhubung ke chatbot aktif."
+logical_id = "4f76d33e-b95c-4109-a51f-05063fad98e9"
+content_hash = "sha256:5f9b847eb8a07312f905c78146941eee7fe52ca166b4074d6be43e02f483ec36"
+size = 205617
+mtime_ms = 1793181042706
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:b0322143-bf61-4155-9a2c-fe262c6ae4a9/4f76d33e-b95c-4109-a51f-05063fad98e9/732b9b63-942c-4b1f-be6b-7029ab0a9d88"
+storage_version_token = "1793181230352302"
+content_type = "text/html"
+
+[[outputs]]
+id = "_Emc8JL-sfv0oHCO1mYQz"
+uri = "file://generated-artifacts/scheme-matrix/matriks-skema-konstruksi.csv"
+type = "table"
+title = "Matriks Skema Konstruksi — CSV"
+description = "77 baris untuk diperiksa melalui spreadsheet, dengan pemetaan KBLI, kutipan halaman, dan catatan peninjauan."
+logical_id = "bc1a8e1a-9b86-4b85-a2df-c0d57f31383a"
+content_hash = "sha256:d792bd243b7fb053a07121aeecd80e631da80ca162bd9767149ac6074f13f41e"
+size = 145473
+mtime_ms = 1793181042700
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:b0322143-bf61-4155-9a2c-fe262c6ae4a9/bc1a8e1a-9b86-4b85-a2df-c0d57f31383a/ad62306f-6e8c-4d7f-b4d1-f87d9700dd63"
+storage_version_token = "1793181231782766"
+content_type = "text/csv"
+
+[[outputs]]
+id = "OHxcYfznCPYeMnzUi5GSV"
+uri = "file://generated-artifacts/scheme-evidence-audit/hasil-audit-bukti-skema.csv"
+type = "table"
+title = "Audit Cakupan Kutipan — Diperbarui"
+description = "385 skenario: 313 tanpa kutipan parsial dan 72 masih parsial dalam konteks chat. Memuat sumber, klausul dan halaman PDF; bukan pengukuran ketepatan jawaban AI."
+logical_id = "13c7d427-dd22-48d0-b1c7-76cee49c808c"
+content_hash = "sha256:dc730534fad3e09c9ae12a790683fb49d5c69f221993e7f01e53141bfde100d4"
+size = 20020
+mtime_ms = 1793183582472
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:b0322143-bf61-4155-9a2c-fe262c6ae4a9/13c7d427-dd22-48d0-b1c7-76cee49c808c/2f0ca7a8-94f7-4c9f-baf9-ed7805cfa7a9"
+storage_version_token = "1793183689159443"
+content_type = "text/csv"
+
+[[outputs]]
+id = "8RHzeofzK8Dis6EswsuhS"
+uri = "file://generated-artifacts/scheme-evidence-audit/paket-kutipan-skema-offline.html"
+type = "html"
+title = "Paket Kutipan Skema — Offline"
+description = "Pilih 77 subklasifikasi dan topik untuk membaca 88 bagian rujukan tanpa pemotongan konteks chat. Mandiri, tanpa internet atau API; susunan kolom tetap perlu diperiksa pada PDF asli."
+logical_id = "05e2861c-4b3e-4f84-a31f-73d96b1f2cec"
+content_hash = "sha256:95ebc33553a6cce36d6870536914e0236bdc86779281ae4c89bf374299570bbf"
+size = 504448
+mtime_ms = 1793183492172
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:b0322143-bf61-4155-9a2c-fe262c6ae4a9/05e2861c-4b3e-4f84-a31f-73d96b1f2cec/1971578a-1179-409a-be83-ebeb272fcd62"
+storage_version_token = "1793183687675192"
+content_type = "text/html"
+
+[[outputs]]
+id = "ql7YmHbOK4tCuV-_jC5ps"
+uri = "file://generated-artifacts/scheme-answer-bank/bank-jawaban-acuan.html"
+type = "html"
+title = "Bank Pertanyaan dan Jawaban Acuan — Offline"
+description = "214 kasus untuk 77 subklasifikasi, dengan pencarian, filter, jawaban acuan, batas klaim, klarifikasi, dan 292 kutipan pendukung. Draf peninjauan; bukan keluaran AI atau keputusan hukum."
+logical_id = "d151a12a-8039-4fff-8672-ef9da03197fc"
+content_hash = "sha256:565c8a75dd46f1710ce89ca5f37aa5beb8e4ff7df05a3ee41e85a37021998fd5"
+size = 690147
+mtime_ms = 1793184376507
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:b0322143-bf61-4155-9a2c-fe262c6ae4a9/d151a12a-8039-4fff-8672-ef9da03197fc/8e912954-d2c5-4244-ae08-e551188e677c"
+storage_version_token = "1793184435500790"
+content_type = "text/html"
+
+[[outputs]]
+id = "J8cb1fsX6ATGnvN_rrLIj"
+uri = "file://generated-artifacts/scheme-answer-bank/bank-jawaban-acuan.csv"
+type = "table"
+title = "Bank Jawaban Acuan — CSV"
+description = "Versi tabel untuk peninjauan: pertanyaan, jawaban acuan, poin wajib, klarifikasi, klaim terlarang, dan lokasi sumber. Tanpa panggilan API AI."
+logical_id = "9c76a9ce-b5c8-46d6-b79e-103c15b2ffff"
+content_hash = "sha256:b5c190aa5ca04d3ca9c125f562f6a5edc36ce0bd07261d62b6bafccff2ce28bb"
+size = 184328
+mtime_ms = 1793184376511
+storage_uri = "gcs://replit-rams-assets-sisko/rams/assets/repl:b0322143-bf61-4155-9a2c-fe262c6ae4a9/9c76a9ce-b5c8-46d6-b79e-103c15b2ffff/beabb4e9-15e2-4f43-b29c-84ef3ffc421a"
+storage_version_token = "1793184437116902"
+content_type = "text/csv"

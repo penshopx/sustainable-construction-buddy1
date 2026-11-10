@@ -1,0 +1,1704 @@
+{
+  "status": "draft_reference_matrix",
+  "records": [
+    {
+      "code": "BG001",
+      "classification": "BG",
+      "title": "Konstruksi Gedung Hunian",
+      "kbliCode": "41011",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB09",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 17
+        },
+        {
+          "id": "KB44",
+          "page": 573
+        }
+      ]
+    },
+    {
+      "code": "BG002",
+      "classification": "BG",
+      "title": "Konstruksi Gedung Perkantoran",
+      "kbliCode": "41012",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB09",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 21
+        },
+        {
+          "id": "KB44",
+          "page": 573
+        }
+      ]
+    },
+    {
+      "code": "BG003",
+      "classification": "BG",
+      "title": "Konstruksi Gedung Industri",
+      "kbliCode": "41013",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB09",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 25
+        },
+        {
+          "id": "KB44",
+          "page": 573
+        }
+      ]
+    },
+    {
+      "code": "BG004",
+      "classification": "BG",
+      "title": "Konstruksi Gedung Perbelanjaan",
+      "kbliCode": "41014",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB09",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 29
+        },
+        {
+          "id": "KB44",
+          "page": 573
+        }
+      ]
+    },
+    {
+      "code": "BG005",
+      "classification": "BG",
+      "title": "Konstruksi Gedung Kesehatan",
+      "kbliCode": "41015",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB09",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 33
+        },
+        {
+          "id": "KB44",
+          "page": 574
+        }
+      ]
+    },
+    {
+      "code": "BG006",
+      "classification": "BG",
+      "title": "Konstruksi Gedung Pendidikan",
+      "kbliCode": "41016",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB09",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 37
+        },
+        {
+          "id": "KB44",
+          "page": 574
+        }
+      ]
+    },
+    {
+      "code": "BG007",
+      "classification": "BG",
+      "title": "Konstruksi Gedung Penginapan",
+      "kbliCode": "41017",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB09",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 41
+        },
+        {
+          "id": "KB44",
+          "page": 574
+        }
+      ]
+    },
+    {
+      "code": "BG008",
+      "classification": "BG",
+      "title": "Konstruksi Gedung Tempat Hiburan dan Olahraga",
+      "kbliCode": "41018",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB09",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 45
+        },
+        {
+          "id": "KB44",
+          "page": 574
+        }
+      ]
+    },
+    {
+      "code": "BG009",
+      "classification": "BG",
+      "title": "Konstruksi Gedung Lainnya",
+      "kbliCode": "41019",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB09",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 49
+        },
+        {
+          "id": "KB44",
+          "page": 574
+        }
+      ]
+    },
+    {
+      "code": "BS001",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Sipil Jalan",
+      "kbliCode": "42101",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 55
+        },
+        {
+          "id": "KB44",
+          "page": 576
+        }
+      ]
+    },
+    {
+      "code": "BS002",
+      "classification": "BS",
+      "title": "Bangunan Sipil Jembatan, Jalan Layang, Fly Over, dan Underpass",
+      "kbliCode": "42102",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 59
+        },
+        {
+          "id": "KB44",
+          "page": 576
+        }
+      ]
+    },
+    {
+      "code": "BS003",
+      "classification": "BS",
+      "title": "Konstruksi Jalan rel",
+      "kbliCode": "42103",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 63
+        },
+        {
+          "id": "KB19",
+          "page": 64
+        },
+        {
+          "id": "KB44",
+          "page": 576
+        }
+      ]
+    },
+    {
+      "code": "BS004",
+      "classification": "BS",
+      "title": "Konstruksi Jaringan Irigasi dan Drainase",
+      "kbliCode": "42201",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 69
+        },
+        {
+          "id": "KB44",
+          "page": 577
+        }
+      ]
+    },
+    {
+      "code": "BS005",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Sipil Pengolahan Air Bersih",
+      "kbliCode": "42202",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 72
+        },
+        {
+          "id": "KB44",
+          "page": 577
+        },
+        {
+          "id": "KB44",
+          "page": 578
+        }
+      ]
+    },
+    {
+      "code": "BS006",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Sipil Prasarana dan Sarana Sistem Pengolahan Limbah Padat, Cair, dan Gas",
+      "kbliCode": "42203",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 77
+        },
+        {
+          "id": "KB44",
+          "page": 578
+        }
+      ]
+    },
+    {
+      "code": "BS007",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Sipil Elektrikal",
+      "kbliCode": "42204",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 81
+        },
+        {
+          "id": "KB44",
+          "page": 578
+        }
+      ]
+    },
+    {
+      "code": "BS008",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Sipil Telekomunikasi untuk Prasarana Transportasi",
+      "kbliCode": "42205",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 85
+        },
+        {
+          "id": "KB44",
+          "page": 578
+        }
+      ]
+    },
+    {
+      "code": "BS009",
+      "classification": "BS",
+      "title": "Konstruksi Sentral Telekomunikasi",
+      "kbliCode": "42206",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 88
+        },
+        {
+          "id": "KB44",
+          "page": 578
+        }
+      ]
+    },
+    {
+      "code": "BS010",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Prasarana Sumber Daya Air",
+      "kbliCode": "42911",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 97
+        },
+        {
+          "id": "KB44",
+          "page": 579
+        }
+      ]
+    },
+    {
+      "code": "BS011",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Pelabuhan Bukan Perikanan",
+      "kbliCode": "42912",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 102
+        },
+        {
+          "id": "KB44",
+          "page": 579
+        },
+        {
+          "id": "KB44",
+          "page": 580
+        }
+      ]
+    },
+    {
+      "code": "BS012",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Pelabuhan Perikanan",
+      "kbliCode": "42913",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 107
+        },
+        {
+          "id": "KB44",
+          "page": 580
+        }
+      ]
+    },
+    {
+      "code": "BS013",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Sipil Minyak dan Gas Bumi",
+      "kbliCode": "42991",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 113
+        },
+        {
+          "id": "KB44",
+          "page": 581
+        }
+      ]
+    },
+    {
+      "code": "BS014",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Sipil Pertambangan",
+      "kbliCode": "42992",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 117
+        },
+        {
+          "id": "KB44",
+          "page": 581
+        }
+      ]
+    },
+    {
+      "code": "BS015",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Sipil Panas Bumi",
+      "kbliCode": "42993",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 121
+        },
+        {
+          "id": "KB44",
+          "page": 581
+        }
+      ]
+    },
+    {
+      "code": "BS016",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Sipil Fasilitas Olah Raga",
+      "kbliCode": "42994",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 125
+        },
+        {
+          "id": "KB44",
+          "page": 581
+        }
+      ]
+    },
+    {
+      "code": "BS017",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Sipil Lainnya Ytdl",
+      "kbliCode": "42999",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 129
+        },
+        {
+          "id": "KB44",
+          "page": 582
+        }
+      ]
+    },
+    {
+      "code": "BS018",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Sipil Fasilitas Pengolahan Produk Kimia, Petrokimia, Farmasi, dan Industri Lainnya",
+      "kbliCode": "42995",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 139
+        },
+        {
+          "id": "KB44",
+          "page": 581
+        },
+        {
+          "id": "KB44",
+          "page": 582
+        }
+      ]
+    },
+    {
+      "code": "BS019",
+      "classification": "BS",
+      "title": "Konstruksi Bangunan Sipil Fasilitas Militer dan Peluncuran Satelit",
+      "kbliCode": "42996",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 23
+        },
+        {
+          "id": "KB19",
+          "page": 143
+        },
+        {
+          "id": "KB44",
+          "page": 582
+        }
+      ]
+    },
+    {
+      "code": "BS020",
+      "classification": "BS",
+      "title": "Konstruksi Jaringan Irigasi, Komunikasi, dan Limbah Lainnya",
+      "kbliCode": "42209",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB10",
+          "page": 23
+        },
+        {
+          "id": "KB19",
+          "page": 94
+        },
+        {
+          "id": "KB44",
+          "page": 579
+        }
+      ]
+    },
+    {
+      "code": "IN001",
+      "classification": "IN",
+      "title": "Instalasi Mekanikal",
+      "kbliCode": "43291",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB11",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 184
+        },
+        {
+          "id": "KB44",
+          "page": 589
+        }
+      ]
+    },
+    {
+      "code": "IN002",
+      "classification": "IN",
+      "title": "Instalasi Telekomunikasi",
+      "kbliCode": "43212",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB11",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 157
+        },
+        {
+          "id": "KB19",
+          "page": 158
+        },
+        {
+          "id": "KB44",
+          "page": 586
+        }
+      ]
+    },
+    {
+      "code": "IN003",
+      "classification": "IN",
+      "title": "Instalasi Peralatan Infrastruktur Pertambangan dan Manufaktur",
+      "kbliCode": "43299",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB11",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 190
+        },
+        {
+          "id": "KB44",
+          "page": 589
+        }
+      ]
+    },
+    {
+      "code": "IN004",
+      "classification": "IN",
+      "title": "Instalasi Minyak dan Gas",
+      "kbliCode": "43223",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB11",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 178
+        },
+        {
+          "id": "KB44",
+          "page": 588
+        }
+      ]
+    },
+    {
+      "code": "IN005",
+      "classification": "IN",
+      "title": "Instalasi Konstruksi Navigasi Laut, Sungai, dan Udara",
+      "kbliCode": "43214",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB11",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 163
+        },
+        {
+          "id": "KB44",
+          "page": 586
+        }
+      ]
+    },
+    {
+      "code": "IN006",
+      "classification": "IN",
+      "title": "Instalasi Elektronika",
+      "kbliCode": "43213",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB11",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 160
+        },
+        {
+          "id": "KB19",
+          "page": 161
+        },
+        {
+          "id": "KB44",
+          "page": 586
+        }
+      ]
+    },
+    {
+      "code": "IN007",
+      "classification": "IN",
+      "title": "Instalasi Saluran Air (Plambing)",
+      "kbliCode": "43221",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB11",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 172
+        },
+        {
+          "id": "KB44",
+          "page": 588
+        }
+      ]
+    },
+    {
+      "code": "IN008",
+      "classification": "IN",
+      "title": "Instalasi Pendingin dan Ventilasi Udara",
+      "kbliCode": "43224",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB11",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 181
+        },
+        {
+          "id": "KB44",
+          "page": 588
+        }
+      ]
+    },
+    {
+      "code": "IN010",
+      "classification": "IN",
+      "title": "Instalasi Pengolahan Air Untuk Pembangkit Listrik",
+      "kbliCode": "43299",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB11",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 190
+        },
+        {
+          "id": "KB44",
+          "page": 589
+        }
+      ]
+    },
+    {
+      "code": "IN011",
+      "classification": "IN",
+      "title": "Instalasi Sinyal dan Rambu-Rambu Jalan Raya",
+      "kbliCode": "43216",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB11",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 169
+        },
+        {
+          "id": "KB44",
+          "page": 587
+        }
+      ]
+    },
+    {
+      "code": "IN012",
+      "classification": "IN",
+      "title": "Instalasi Sinyal dan Telekomunikasi Kereta Api",
+      "kbliCode": "43215",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB11",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 166
+        },
+        {
+          "id": "KB44",
+          "page": 587
+        }
+      ]
+    },
+    {
+      "code": "IN013",
+      "classification": "IN",
+      "title": "Instalasi Pemanas dan Geotermal",
+      "kbliCode": "43222",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB11",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 175
+        },
+        {
+          "id": "KB44",
+          "page": 588
+        }
+      ]
+    },
+    {
+      "code": "IN014",
+      "classification": "IN",
+      "title": "Instalasi Meteorologi, Klimatologi dan Geofisika",
+      "kbliCode": "33203",
+      "reviewNotes": [
+        "Kode terdapat dalam skema, tetapi tidak terdapat dalam tabel salinan KB45."
+      ],
+      "references": [
+        {
+          "id": "KB11",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 187
+        },
+        {
+          "id": "KB44",
+          "page": 539
+        }
+      ]
+    },
+    {
+      "code": "KK001",
+      "classification": "KK",
+      "title": "Pondasi Konstruksi",
+      "kbliCode": "43901",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 212
+        },
+        {
+          "id": "KB44",
+          "page": 593
+        }
+      ]
+    },
+    {
+      "code": "KK002",
+      "classification": "KK",
+      "title": "Konstruksi Reservoir Pembangkit Listrik Tenaga Air",
+      "kbliCode": "42914",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 132
+        },
+        {
+          "id": "KB44",
+          "page": 580
+        }
+      ]
+    },
+    {
+      "code": "KK003",
+      "classification": "KK",
+      "title": "Konstruksi Intake, Control Gate, Penstock dan Outflow Pembangkit Listrik Tenaga Air",
+      "kbliCode": "42914",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 133
+        },
+        {
+          "id": "KB44",
+          "page": 580
+        }
+      ]
+    },
+    {
+      "code": "KK004",
+      "classification": "KK",
+      "title": "Konstruksi Pelindung Pantai",
+      "kbliCode": "42915",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 136
+        },
+        {
+          "id": "KB44",
+          "page": 580
+        }
+      ]
+    },
+    {
+      "code": "KK005",
+      "classification": "KK",
+      "title": "Pekerjaan Lapis Perkerasan Beton (Rigid Pavement)",
+      "kbliCode": "43909",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 226
+        },
+        {
+          "id": "KB44",
+          "page": 594
+        }
+      ]
+    },
+    {
+      "code": "KK006",
+      "classification": "KK",
+      "title": "Pekerjaan Konstruksi Kedap Air, Minyak, dan Gas",
+      "kbliCode": "43909",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 226
+        },
+        {
+          "id": "KB44",
+          "page": 594
+        }
+      ]
+    },
+    {
+      "code": "KK007",
+      "classification": "KK",
+      "title": "Pekerjaan Konstruksi Kedap Suara",
+      "kbliCode": "43299",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 197
+        },
+        {
+          "id": "KB44",
+          "page": 589
+        }
+      ]
+    },
+    {
+      "code": "KK008",
+      "classification": "KK",
+      "title": "Perkerasan Aspal",
+      "kbliCode": "43909",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 226
+        },
+        {
+          "id": "KB44",
+          "page": 594
+        }
+      ]
+    },
+    {
+      "code": "KK009",
+      "classification": "KK",
+      "title": "Perkerasan Berbutir",
+      "kbliCode": "43909",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 226
+        },
+        {
+          "id": "KB44",
+          "page": 594
+        }
+      ]
+    },
+    {
+      "code": "KK010",
+      "classification": "KK",
+      "title": "Pengeboran dan Injeksi Semen Bertekanan (Drilling and Grouting)",
+      "kbliCode": "43909",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 226
+        },
+        {
+          "id": "KB19",
+          "page": 227
+        },
+        {
+          "id": "KB44",
+          "page": 594
+        }
+      ]
+    },
+    {
+      "code": "KK011",
+      "classification": "KK",
+      "title": "Pemasangan Rangka dan Atap/Roof Covering",
+      "kbliCode": "43903",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 218
+        },
+        {
+          "id": "KB44",
+          "page": 593
+        }
+      ]
+    },
+    {
+      "code": "KK012",
+      "classification": "KK",
+      "title": "Pekerjaan Struktur Beton",
+      "kbliCode": "43909",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 227
+        },
+        {
+          "id": "KB44",
+          "page": 594
+        }
+      ]
+    },
+    {
+      "code": "KK013",
+      "classification": "KK",
+      "title": "Konstruksi Struktur Beton Pascatarik (Post Tensioned)",
+      "kbliCode": "43909",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 227
+        },
+        {
+          "id": "KB44",
+          "page": 594
+        }
+      ]
+    },
+    {
+      "code": "KK014",
+      "classification": "KK",
+      "title": "Konstruksi Terowongan",
+      "kbliCode": "42104",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 66
+        },
+        {
+          "id": "KB19",
+          "page": 67
+        },
+        {
+          "id": "KB44",
+          "page": 576
+        }
+      ]
+    },
+    {
+      "code": "KK015",
+      "classification": "KK",
+      "title": "Pekerjaan Konstruksi Tahan Api (Tanur, Anneling, Flare, atau Incenerator)",
+      "kbliCode": "43909",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 227
+        },
+        {
+          "id": "KB44",
+          "page": 594
+        }
+      ]
+    },
+    {
+      "code": "KK016",
+      "classification": "KK",
+      "title": "Pemasangan Kerangka Baja",
+      "kbliCode": "43904",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB12",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 220
+        },
+        {
+          "id": "KB44",
+          "page": 593
+        }
+      ]
+    },
+    {
+      "code": "KP001",
+      "classification": "KP",
+      "title": "Pekerjaan konstruksi Prapabrikasi Bangunan Gedung",
+      "kbliCode": "41020",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB13",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 52
+        },
+        {
+          "id": "KB44",
+          "page": 575
+        }
+      ]
+    },
+    {
+      "code": "KP002",
+      "classification": "KP",
+      "title": "Pekerjaan Konstruksi Prapabrikasi Bangunan Sipil",
+      "kbliCode": "42209",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB13",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 146
+        },
+        {
+          "id": "KB44",
+          "page": 579
+        }
+      ]
+    },
+    {
+      "code": "PA001",
+      "classification": "PA",
+      "title": "Penyewaan Peralatan",
+      "kbliCode": "43905",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB14",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 223
+        },
+        {
+          "id": "KB44",
+          "page": 593
+        },
+        {
+          "id": "KB44",
+          "page": 594
+        }
+      ]
+    },
+    {
+      "code": "PB001",
+      "classification": "PB",
+      "title": "Pengerjaan Pemasangan Kaca dan Alumunium",
+      "kbliCode": "43301",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB16",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 194
+        },
+        {
+          "id": "KB44",
+          "page": 590
+        }
+      ]
+    },
+    {
+      "code": "PB003",
+      "classification": "PB",
+      "title": "Pengerjaan Lantai, Dinding, Peralatan Saniter dan Plafon",
+      "kbliCode": "43302",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB16",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 197
+        },
+        {
+          "id": "KB44",
+          "page": 591
+        }
+      ]
+    },
+    {
+      "code": "PB004",
+      "classification": "PB",
+      "title": "Dekorasi Interior",
+      "kbliCode": "43309",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB16",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 203
+        },
+        {
+          "id": "KB19",
+          "page": 204
+        },
+        {
+          "id": "KB44",
+          "page": 591
+        }
+      ]
+    },
+    {
+      "code": "PB005",
+      "classification": "PB",
+      "title": "Pemasangan Ornamen dan Pekerjaan Seni",
+      "kbliCode": "43309",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB16",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 204
+        },
+        {
+          "id": "KB44",
+          "page": 591
+        }
+      ]
+    },
+    {
+      "code": "PB007",
+      "classification": "PB",
+      "title": "Pengecatan",
+      "kbliCode": "43303",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB16",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 200
+        },
+        {
+          "id": "KB44",
+          "page": 591
+        }
+      ]
+    },
+    {
+      "code": "PB009",
+      "classification": "PB",
+      "title": "Pembersihan dan Perapihan Bangunan Gedung dan/atau Bangunan Sipil",
+      "kbliCode": "43309",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB16",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 209
+        },
+        {
+          "id": "KB19",
+          "page": 210
+        },
+        {
+          "id": "KB44",
+          "page": 591
+        }
+      ]
+    },
+    {
+      "code": "PB010",
+      "classification": "PB",
+      "title": "Pekerjaan Lansekap, Pertamanan, dan Penanaman Vegetasi",
+      "kbliCode": "43309",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB16",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 207
+        },
+        {
+          "id": "KB44",
+          "page": 591
+        }
+      ]
+    },
+    {
+      "code": "PB011",
+      "classification": "PB",
+      "title": "Pemulihan Lahan Pekerjaan Konstruksi",
+      "kbliCode": "43909",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB16",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 227
+        },
+        {
+          "id": "KB44",
+          "page": 594
+        }
+      ]
+    },
+    {
+      "code": "PL001",
+      "classification": "PL",
+      "title": "Pembongkaran Bangunan",
+      "kbliCode": "43110",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB15",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 149
+        },
+        {
+          "id": "KB44",
+          "page": 583
+        }
+      ]
+    },
+    {
+      "code": "PL002",
+      "classification": "PL",
+      "title": "Pengerukan",
+      "kbliCode": "42912",
+      "reviewNotes": [
+        "Kode KBLI skema berbeda dari tabel salinan KB45; jangan menggabungkannya otomatis."
+      ],
+      "references": [
+        {
+          "id": "KB15",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 110
+        },
+        {
+          "id": "KB44",
+          "page": 579
+        },
+        {
+          "id": "KB44",
+          "page": 580
+        }
+      ]
+    },
+    {
+      "code": "PL003",
+      "classification": "PL",
+      "title": "Penyiapan Lahan Konstruksi",
+      "kbliCode": "43120",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB15",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 152
+        },
+        {
+          "id": "KB44",
+          "page": 584
+        }
+      ]
+    },
+    {
+      "code": "PL004",
+      "classification": "PL",
+      "title": "Pekerjaan Tanah",
+      "kbliCode": "43120",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB15",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 153
+        },
+        {
+          "id": "KB44",
+          "page": 584
+        }
+      ]
+    },
+    {
+      "code": "PL005",
+      "classification": "PL",
+      "title": "Pembuatan/Pengeboran Sumur Air Tanah",
+      "kbliCode": "42207",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB15",
+          "page": 21
+        },
+        {
+          "id": "KB19",
+          "page": 91
+        },
+        {
+          "id": "KB44",
+          "page": 579
+        }
+      ]
+    },
+    {
+      "code": "PL006",
+      "classification": "PL",
+      "title": "Pelaksanaan Pekerjaan Utilitas",
+      "kbliCode": "43120",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB15",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 153
+        },
+        {
+          "id": "KB44",
+          "page": 584
+        }
+      ]
+    },
+    {
+      "code": "PL007",
+      "classification": "PL",
+      "title": "Survei Penyelidikan Lapangan",
+      "kbliCode": "43120",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB15",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 153
+        },
+        {
+          "id": "KB44",
+          "page": 584
+        }
+      ]
+    },
+    {
+      "code": "PL008",
+      "classification": "PL",
+      "title": "Pemasangan Perancah (Steiger)",
+      "kbliCode": "43902",
+      "reviewNotes": [],
+      "references": [
+        {
+          "id": "KB15",
+          "page": 22
+        },
+        {
+          "id": "KB19",
+          "page": 215
+        },
+        {
+          "id": "KB44",
+          "page": 593
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+kind = "slides"
+previewPath = "/pub-aspekindo-ringkas/"
+title = "PUB ASPEKINDO — Versi Ringkas"
+description = "Presentasi ringkas 6 slide untuk rapat pengurus, pembukaan acara, dan pertemuan singkat; merangkum masalah, ekosistem, perjalanan anggota, 4 SIAP, nilai, serta usulan pilot dengan batas klaim resmi yang jelas."
+version = "1.0.0"
+id = "artifacts/pub-aspekindo-ringkas"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/pub-aspekindo-ringkas/" ]
+localPort = 24451
+
+[services.development]
+run = "pnpm --filter @workspace/pub-aspekindo-ringkas run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/pub-aspekindo-ringkas", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/pub-aspekindo-ringkas/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24451"
+BASE_PATH = "/pub-aspekindo-ringkas/"

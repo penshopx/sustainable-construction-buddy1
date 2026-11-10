@@ -1,0 +1,50 @@
+export interface MiniAppDef {
+  id: string;
+  name: string;
+  description: string;
+  categorySlug: string;
+}
+
+export const miniAppRegistry: MiniAppDef[] = [
+  { id: "bid-calculator", name: "Risk-Adjusted Tender Pricing Engine", description: "Hitung harga tender dengan penyesuaian risiko agar margin aman", categorySlug: "strategic-business" },
+  { id: "cashflow-stress", name: "Tender Cashflow Survival Simulator", description: "Simulasi ketahanan arus kas jika pembayaran mundur", categorySlug: "strategic-business" },
+  { id: "contract-trap", name: "Contract Trap Analyzer", description: "Deteksi klausul berbahaya dalam kontrak sebelum tanda tangan", categorySlug: "strategic-business" },
+  { id: "tender-scorecard", name: "Tender Risk Scorecard", description: "Evaluasi kelayakan mengikuti tender berdasarkan 5 faktor", categorySlug: "strategic-business" },
+  { id: "multi-project-radar", name: "Multi-Project Risk Radar", description: "Pantau risiko gabungan semua proyek aktif", categorySlug: "strategic-business" },
+  { id: "cost-drift", name: "Real-Time Cost Drift Alarm", description: "Monitor deviasi biaya per item pekerjaan", categorySlug: "financial-control" },
+  { id: "margin-leak", name: "Margin Leak Scanner", description: "Deteksi sumber kebocoran margin proyek", categorySlug: "financial-control" },
+  { id: "survival-sim", name: "Business Survival Simulator", description: "Berapa bulan perusahaan bertahan?", categorySlug: "financial-control" },
+  { id: "debt-service", name: "Debt Service Coverage Ratio", description: "Kemampuan perusahaan membayar utang dari pendapatan", categorySlug: "financial-control" },
+  { id: "break-even", name: "Break-Even Analyzer", description: "Berapa proyek minimum untuk mencapai BEP?", categorySlug: "financial-control" },
+  { id: "portfolio-cash", name: "Portfolio Cash Planner", description: "Rencanakan arus kas gabungan semua proyek", categorySlug: "financial-control" },
+  { id: "productivity-checker", name: "Productivity Reality Checker", description: "Bandingkan estimasi produktivitas vs standar histori", categorySlug: "project-planning" },
+  { id: "resource-clash", name: "Resource Clash Detector", description: "Deteksi konflik sumber daya antar proyek bersamaan", categorySlug: "project-planning" },
+  { id: "hidden-delay", name: "Hidden Delay Factor Library", description: "Faktor keterlambatan tersembunyi yang sering terlewat", categorySlug: "project-planning" },
+  { id: "schedule-buffer", name: "Schedule Buffer Analyzer", description: "Hitung buffer waktu berdasarkan profil risiko", categorySlug: "project-planning" },
+  { id: "resource-allocation", name: "Resource Allocation Matrix", description: "Alokasi sumber daya antar proyek & deteksi konflik", categorySlug: "project-planning" },
+  { id: "vo-defense", name: "Variation Order Defense Tracker", description: "Catat & lacak semua VO untuk klaim yang kuat", categorySlug: "execution-control" },
+  { id: "rework-cost", name: "Rework & Waste Cost Calculator", description: "Hitung biaya tersembunyi dari rework dan waste", categorySlug: "execution-control" },
+  { id: "daily-progress", name: "Daily Progress Intelligence", description: "Monitoring progres harian berbasis data aktual", categorySlug: "execution-control" },
+  { id: "quality-inspection", name: "Mobile Quality Inspection", description: "Checklist mutu digital di lapangan", categorySlug: "execution-control" },
+  { id: "supplier-scorecard", name: "Supplier Reliability Scorecard", description: "Menilai kinerja vendor berdasarkan mutu dan waktu", categorySlug: "supply-chain" },
+  { id: "material-forecast", name: "Material Price Forecast Tool", description: "Prediksi tren harga material konstruksi", categorySlug: "supply-chain" },
+  { id: "procurement-timing", name: "Procurement Timing Optimizer", description: "Menentukan waktu beli paling menguntungkan", categorySlug: "supply-chain" },
+  { id: "skill-gap", name: "Skill Gap Mapping Analyzer", description: "Identifikasi kekurangan kompetensi SDM", categorySlug: "human-capital" },
+  { id: "training-roi", name: "Training ROI Calculator", description: "Mengukur dampak pelatihan terhadap produktivitas", categorySlug: "human-capital" },
+  { id: "workforce-optimizer", name: "Workforce Allocation Optimizer", description: "Distribusi tenaga kerja optimal antar proyek", categorySlug: "human-capital" },
+  { id: "productivity-benchmark", name: "Productivity Benchmark Engine", description: "Standar produktivitas per jenis pekerjaan", categorySlug: "human-capital" },
+  { id: "smart-docs", name: "Smart Document Control", description: "Manajemen dokumen proyek digital terintegrasi", categorySlug: "digital-transformation" },
+  { id: "auto-report", name: "Automated Reporting Generator", description: "Laporan proyek otomatis berbasis data aktual", categorySlug: "digital-transformation" },
+  { id: "fuel-loss", name: "Equipment & Fuel Loss Tracker", description: "Monitor anomali konsumsi BBM alat berat", categorySlug: "risk-security" },
+  { id: "theft-impact", name: "Theft Cost Impact Calculator", description: "Hitung total kerugian finansial per insiden", categorySlug: "risk-security" },
+  { id: "site-security", name: "Site Security Scorer", description: "Skor keamanan proyek berdasarkan 10 aspek", categorySlug: "risk-security" },
+  { id: "asset-depreciation", name: "Asset Depreciation Tracker", description: "Lacak nilai buku aset dan rencana penggantian", categorySlug: "risk-security" },
+  { id: "dust-noise", name: "Dust & Noise Risk Index", description: "Skor risiko protes masyarakat dari debu & kebisingan", categorySlug: "environmental-esg" },
+  { id: "carbon-cost", name: "Carbon Cost Awareness Tool", description: "Estimasi emisi karbon dan biaya karbon tersembunyi", categorySlug: "environmental-esg" },
+  { id: "env-compliance", name: "Environmental Compliance Check", description: "Checklist kepatuhan lingkungan proyek konstruksi", categorySlug: "environmental-esg" },
+  { id: "retention-planner", name: "Retention Recovery Planner", description: "Tracking retensi proyek & jatuh tempo pencairan", categorySlug: "post-project" },
+  { id: "lessons-pattern", name: "Lessons Pattern Analyzer", description: "Deteksi pola kesalahan berulang dari histori proyek", categorySlug: "post-project" },
+  { id: "defect-tracker", name: "Defect Liability Tracker", description: "Tracking defect selama masa pemeliharaan", categorySlug: "post-project" },
+  { id: "final-account", name: "Final Account Checker", description: "Pastikan dokumen penutupan proyek lengkap", categorySlug: "post-project" },
+  { id: "warranty-tracker", name: "Warranty Risk Tracker", description: "Monitoring risiko masa pemeliharaan", categorySlug: "post-project" },
+];

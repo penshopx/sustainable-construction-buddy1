@@ -1,0 +1,146 @@
+[
+  {
+    "id": "779c2961-c9d2-4889-985d-cf471df36fb7",
+    "position": 1,
+    "filepath": "src/pages/slides/Slide01.tsx",
+    "title": "PUB ASPEKINDO — Dari Data Anggota Menjadi Kesiapan yang Terarah",
+    "description": "PUB ASPEKINDO — Dari Data Anggota Menjadi Kesiapan yang Terarah",
+    "speakerNotes": "- Pembuka: Selamat datang, Bapak dan Ibu. Dalam sesi ini kita akan melihat PUB ASPEKINDO sebagai cara mengubah data anggota yang sehari-hari tersebar menjadi langkah kesiapan yang lebih terarah dan mudah dipantau.\n\n- Pokok bicara: Yang akan kita bahas bukan sekadar daftar menu atau teknologi di belakangnya. Kita akan mengikuti alur yang utuh: anggota menemukan informasi, mengenali kebutuhannya, belajar, melengkapi bukti, membaca posisi kesiapan, lalu menentukan tindak lanjut yang masuk akal.\n\n- Pokok bicara: Bagi anggota, alur ini diharapkan mengurangi kebingungan tentang harus mulai dari mana. Bagi pengurus, alur yang sama menyediakan data yang lebih konsisten dan dapat ditelusuri saat menyusun program pendampingan.\n\n- Pokok bicara: Sesi utama dirancang selama sekitar 27 menit. Karena itu, mari gunakan waktu ini untuk memahami logika perjalanannya terlebih dahulu; pertanyaan dan contoh yang lebih spesifik dapat kita dalami pada sesi tanya jawab.\n\n- Transisi: Kita mulai dari persoalan bersama yang membuat PUB ASPEKINDO diperlukan.\n\n- Durasi: 1 menit."
+  },
+  {
+    "id": "d8c18126-872e-4460-8220-6f82448211fa",
+    "position": 2,
+    "filepath": "src/pages/slides/Slide02.tsx",
+    "title": "Mengapa PUB ASPEKINDO Dibutuhkan",
+    "description": "Mengapa PUB ASPEKINDO Dibutuhkan",
+    "speakerNotes": "- Pembuka: Tantangan kita bukan semata-mata kekurangan informasi. Yang lebih sering terjadi adalah informasi, pembelajaran, bukti kegiatan, dan tindak lanjut berada di tempat yang terpisah sehingga sulit membentuk gambaran yang utuh.\n\n- Pokok bicara: Seorang anggota mungkin sudah mengetahui agenda, pernah mengikuti pelatihan, dan memiliki dokumen pendukung. Namun tanpa jalur yang menyambungkan semuanya, ia masih harus menebak kebutuhan berikutnya dan mengulang pencatatan di banyak tempat.\n\n- Pokok bicara: Di sisi lain, pengurus memerlukan gambaran kesiapan yang konsisten, bukan hanya kesan dari percakapan atau laporan yang datang tidak seragam. Gambaran tersebut perlu dapat ditelusuri kembali: data apa yang digunakan, kapan diperbarui, dan aktivitas apa yang mendukungnya.\n\n- Pokok bicara: PUB menyatukan proses itu dalam satu ruang kerja digital. Tujuannya bukan menggantikan pertimbangan manusia, melainkan membuat keputusan pendampingan dan pengembangan lebih tertopang oleh data yang tersedia. Dengan catatan yang tersambung, diskusi dapat beralih dari mencari berkas menuju membahas langkah perbaikan yang paling bermanfaat.\n\n- Transisi: Agar perannya tidak disalahpahami, berikut posisi PUB dalam ekosistem ASPEKINDO.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "0dcdc200-e38b-4a7c-bd30-f4cef4cc3669",
+    "position": 3,
+    "filepath": "src/pages/slides/Slide03.tsx",
+    "title": "PUB Adalah Payung Layanan Digital ASPEKINDO",
+    "description": "PUB Adalah Payung Layanan Digital ASPEKINDO",
+    "speakerNotes": "- Pembuka: PUB adalah payung pengalaman digital anggota. Namun payung ini tidak berarti semua unsur di dalamnya memiliki kewenangan atau fungsi yang sama; justru pembagian peran yang jelas adalah fondasinya.\n\n- Pokok bicara: ASPEKINDO tetap menjadi organisasi induk dan pemilik konteks layanan bagi anggota. PUB membantu menyajikan informasi, proses belajar, data kesiapan, dan tindak lanjut dalam pengalaman yang lebih tersambung.\n\n- Pokok bicara: Produk native ASPEKINDO, kanal kemitraan, operator, serta mesin insight ditempatkan sesuai fungsi dan tanggung jawab masing-masing. Dengan demikian, pengguna mengetahui mana data yang dikelola di workspace, mana rujukan pembelajaran, dan mana layanan pihak lain. Kejelasan ini juga memudahkan pengelola menjaga komunikasi dan akuntabilitas pada jalur yang tepat.\n\n- Pokok bicara: Batas ini penting untuk disampaikan sejak awal. Kanal kemitraan maupun HelpDesk tidak boleh disamakan dengan layanan resmi lembaga berwenang. PUB dapat membantu mengarahkan dan menyiapkan informasi, tetapi tidak mengambil alih otoritas institusi resmi.\n\n- Transisi: Setelah memahami perannya, mari lihat pengalaman anggota sebagai satu perjalanan yang tersambung.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "5912ea62-ebd6-4ab9-a29c-bbece0b867f7",
+    "position": 4,
+    "filepath": "src/pages/slides/Slide04.tsx",
+    "title": "Satu Perjalanan Anggota, Bukan Kumpulan Menu",
+    "description": "Satu Perjalanan Anggota, Bukan Kumpulan Menu",
+    "speakerNotes": "- Pembuka: Dari sudut pandang anggota, PUB dirancang sebagai satu perjalanan. Kita tidak ingin pengguna melihatnya sebagai kumpulan menu yang berdiri sendiri-sendiri dan harus dipelajari tanpa konteks.\n\n- Pokok bicara: Perjalanan dapat dimulai dari informasi dan agenda yang relevan. Ketika anggota belum yakin dengan kebutuhannya, Navigator dan Guided Intake membantu menyusun pertanyaan awal serta mengarahkan langkah pertama.\n\n- Pokok bicara: Setelah itu, anggota dapat melengkapi data dan bukti, mengikuti pembelajaran melalui LMS, kemudian membaca posisinya di Peta Kompetensi 4 SIAP. Setiap tahap memberikan konteks bagi tahap berikutnya, bukan mengharuskan anggota memulai lagi dari nol. Alur ini membuat pengalaman digital terasa sebagai pendamping kerja, bukan tambahan administrasi semata.\n\n- Pokok bicara: Bila terlihat area yang perlu diperbaiki, rekomendasi tidak berhenti sebagai teks. Rekomendasi membawa anggota kembali ke modul sumber yang relevan, seperti LKUT, proyek, risiko, anggaran, atau pembelajaran, untuk melakukan tindak lanjut nyata.\n\n- Transisi: Kita lihat lebih dekat pintu masuk pertama yang dapat diakses publik.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "7e98d41c-bdeb-45c4-b969-f393b3aa4477",
+    "position": 5,
+    "filepath": "src/pages/slides/Slide05.tsx",
+    "title": "Pintu Masuk Publik: Informasi yang Lebih Terarah",
+    "description": "Pintu Masuk Publik: Informasi yang Lebih Terarah",
+    "speakerNotes": "- Pembuka: Pengalaman anggota sebenarnya dimulai sebelum masuk ke workspace. Karena itu, pintu masuk publik perlu memberi informasi yang jelas, terarah, dan tidak membuat pengunjung berasumsi melampaui fungsi platform.\n\n- Pokok bicara: Halaman landing menjelaskan manfaat serta ruang lingkup PUB secara ringkas. Pusat Informasi kemudian menjadi tempat artikel yang memang telah dipublikasikan, sehingga anggota maupun calon anggota dapat membangun pemahaman awal dari sumber yang tertata.\n\n- Pokok bicara: Agenda publik menggunakan agenda ASPEKINDO yang telah dipublikasikan dan masih relevan. Ini membantu pengunjung melihat kegiatan yang dapat diikuti tanpa mencampurkan agenda internal atau informasi yang belum siap dibuka. Dengan penyajian yang teratur, calon peserta juga dapat menilai relevansi agenda sebelum memutuskan mengikuti langkah berikutnya.\n\n- Pokok bicara: Saat pengguna diarahkan ke sumber eksternal, tautan dibuka secara aman ke sumber asal. PUB tidak mengklaim konten pihak lain sebagai miliknya dan tidak menyiratkan hubungan resmi yang tidak ada.\n\n- Transisi: Bila anggota belum tahu harus mulai dari mana, HelpDesk berfungsi sebagai navigator awal.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "fd3a08c5-b805-4238-9390-53815f6d0efe",
+    "position": 6,
+    "filepath": "src/pages/slides/Slide06.tsx",
+    "title": "HelpDesk: Navigator, Bukan Pengganti Layanan Resmi",
+    "description": "HelpDesk: Navigator, Bukan Pengganti Layanan Resmi",
+    "speakerNotes": "- Pembuka: HelpDesk membantu anggota menyusun pertanyaan dan menemukan jalur awal yang tepat. Perannya adalah navigator, terutama ketika kebutuhan pengguna masih umum atau belum terpetakan.\n\n- Pokok bicara: Navigator membantu memahami kebutuhan awal, sedangkan Guided Intake menata informasi yang diberikan pengguna agar lebih mudah dibaca dan ditindaklanjuti. Hasilnya adalah arah ke materi, modul, atau langkah persiapan yang sesuai, bukan jawaban instan tanpa konteks. Pengguna tetap memegang kendali atas pilihan langkah yang akan diambil setelah memperoleh arah tersebut.\n\n- Pokok bicara: Kanal ini dapat ditemui dari area publik maupun area anggota. Dari sana, pengguna diarahkan menuju workspace yang relevan sehingga informasi awal dapat diteruskan menjadi aktivitas yang lebih terstruktur.\n\n- Pokok bicara: Batasnya harus tegas. HelpDesk bukan sistem tiket manusia, tidak menjanjikan SLA atau waktu penyelesaian, dan bukan kanal pengajuan resmi kepada lembaga mana pun. Untuk proses resmi, pengguna tetap mengikuti kanal dan ketentuan institusi yang berwenang.\n\n- Transisi: Setelah arahnya ditemukan, pekerjaan utama anggota berlangsung di workspace.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "b7ff7320-9da8-4691-9eb5-b9ecc755ffdf",
+    "position": 7,
+    "filepath": "src/pages/slides/Slide07.tsx",
+    "title": "Workspace Anggota: Pusat Kendali Kesiapan",
+    "description": "Workspace Anggota: Pusat Kendali Kesiapan",
+    "speakerNotes": "- Pembuka: Workspace adalah pusat kendali anggota. Di sinilah kondisi data dan progres kesiapan dapat dilihat secara menyeluruh, tanpa harus berpindah-pindah aplikasi hanya untuk memahami pekerjaan berikutnya.\n\n- Pokok bicara: Dashboard merangkum progres modul dan membantu anggota berpindah ke area yang masih perlu dilengkapi. Ringkasan ini bukan sekadar penghitung aktivitas, tetapi pengingat agar perhatian diarahkan pada data atau proses yang belum selesai.\n\n- Pokok bicara: Data asesmen, domain, proyek, risiko, anggaran, PANCEK, dan LKUT disusun dalam konteks kesiapan usaha. Anggota dapat melihat hubungan antara pekerjaan operasional sehari-hari dengan kebutuhan penguatan yang lebih luas. Tampilan yang terpusat juga memudahkan anggota memilih satu pekerjaan kecil yang realistis untuk diselesaikan lebih dahulu.\n\n- Pokok bicara: Setiap modul menampung bukti yang dapat digunakan dalam evaluasi berikutnya. Karena sumbernya tetap terlihat, proses dapat ditelusuri dan pembahasan antara anggota, pendamping, serta pengurus dapat bertumpu pada informasi yang sama.\n\n- Transisi: Bukti-bukti tersebut kemudian dibaca melalui kerangka Peta Kompetensi 4 SIAP.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "9cfc7ac8-6da5-4e29-9bed-ea27e2d23ed8",
+    "position": 8,
+    "filepath": "src/pages/slides/Slide08.tsx",
+    "title": "Peta Kompetensi 4 SIAP: Membaca Posisi Secara Utuh",
+    "description": "Peta Kompetensi 4 SIAP: Membaca Posisi Secara Utuh",
+    "speakerNotes": "- Pembuka: Peta Kompetensi 4 SIAP memberi kita bahasa bersama untuk membaca posisi anggota secara lebih utuh. Dengan kerangka yang sama, percakapan kesiapan tidak hanya bergantung pada kesan umum.\n\n- Pokok bicara: Empat dimensi yang dibaca adalah Administrasi, Operasional, Kompetensi, dan Pasar. Keempatnya membantu melihat bahwa kesiapan usaha bukan hanya soal satu dokumen atau satu pelatihan, melainkan gabungan dari beberapa kemampuan. Kerangka ini membuat pembahasan lebih seimbang karena setiap dimensi memperoleh perhatian yang proporsional.\n\n- Pokok bicara: Setiap dimensi menggunakan bukti dari aktivitas dan data pada modul yang terkait. Karena itu, anggota dapat menelusuri dari sebuah indikator kembali ke sumbernya dan memahami alasan sebuah area perlu diperhatikan.\n\n- Pokok bicara: Skor bukti dipisahkan dari cakupan data. Pemisahan ini sangat penting: hasil yang tampak tinggi tetapi dibangun dari data yang belum lengkap tidak boleh dibaca sebagai gambaran final atau terlalu meyakinkan.\n\n- Transisi: Karena itu, cara membaca skor menjadi sama pentingnya dengan angka skornya sendiri.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "cc1651f2-d60e-4dbc-96ff-823d7f61ebb7",
+    "position": 9,
+    "filepath": "src/pages/slides/Slide09.tsx",
+    "title": "Skor Bukan Vonis — Ia Adalah Titik Mulai Perbaikan",
+    "description": "Skor Bukan Vonis — Ia Adalah Titik Mulai Perbaikan",
+    "speakerNotes": "- Pembuka: Pesan terpenting pada slide ini sederhana: skor bukan vonis dan bukan keputusan akhir. Skor adalah titik mulai untuk melihat apa yang sudah kuat dan apa yang perlu diperbaiki.\n\n- Pokok bicara: Sistem menunjukkan indikator yang sudah memiliki data dan indikator yang masih kosong, disertai tingkat cakupannya. Dengan cara ini, anggota tidak hanya melihat angka akhir, tetapi juga kualitas keterisian informasi yang membentuk angka tersebut.\n\n- Pokok bicara: Snapshot dan sumber data menjaga hasil tetap dapat ditelusuri. Ketika ada pertanyaan tentang suatu hasil, pengguna dan pendamping dapat kembali memeriksa data yang mendasari, bukan memperdebatkan angka tanpa bukti. Kebiasaan ini mendorong perbaikan berbasis fakta dan memberi ruang untuk memperbarui data bila kondisinya berubah.\n\n- Pokok bicara: Rekomendasi mengarahkan anggota ke modul sumber untuk bertindak. Namun hasil tetap perlu diperiksa ulang, dipahami dalam konteks usaha, dan tidak digunakan sendirian untuk mengambil keputusan penting.\n\n- Transisi: Salah satu contoh tindak lanjut terstruktur dari data tersebut adalah proses LKUT.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "5fd790cc-b8db-4efe-9e83-bbaa296c6c5d",
+    "position": 10,
+    "filepath": "src/pages/slides/Slide10.tsx",
+    "title": "LKUT: Dari Checklist Menjadi Siklus Laporan",
+    "description": "LKUT: Dari Checklist Menjadi Siklus Laporan",
+    "speakerNotes": "- Pembuka: LKUT mengubah checklist menjadi siklus laporan yang dapat dikelola dari tahun ke tahun. Pendekatan ini membantu anggota melihat pelaporan sebagai proses perbaikan, bukan pekerjaan satu kali.\n\n- Pokok bicara: Anggota dapat melihat tahun yang tersedia dan mengelola satu laporan untuk setiap pengguna pada setiap tahun. Struktur ini menjaga catatan tetap rapi, sekaligus memudahkan pembandingan perkembangan dari periode ke periode.\n\n- Pokok bicara: Alurnya bergerak dari draf, penyuntingan dan peninjauan, pengiriman, lalu tindak lanjut. Setiap tahap memberi kesempatan untuk melengkapi informasi dan memastikan pekerjaan berikutnya tidak terlepas dari konteks laporan.\n\n- Pokok bicara: Simulator kesiapan memberikan pratinjau kelengkapan sebelum tindak lanjut dilakukan. Simulator ini berguna untuk mempersiapkan diri, tetapi bukan keputusan resmi, bukan persetujuan, dan tidak menggantikan penilaian pihak yang berwenang.\n\n- Transisi: Selain pelaporan, peningkatan kesiapan juga membutuhkan proses belajar yang tercatat.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "9c262ebe-4d2c-4e06-9344-fa66b1a451c7",
+    "position": 11,
+    "filepath": "src/pages/slides/Slide11.tsx",
+    "title": "LMS Native ASPEKINDO: Belajar dalam Ekosistem Sendiri",
+    "description": "LMS Native ASPEKINDO: Belajar dalam Ekosistem Sendiri",
+    "speakerNotes": "- Pembuka: LMS native ASPEKINDO menjaga proses belajar tetap berada dalam konteks kebutuhan anggota. Pembelajaran tidak berdiri sendiri, melainkan dapat dihubungkan dengan area kesiapan yang ingin diperkuat.\n\n- Pokok bicara: Katalog membedakan program internal, eksternal, dan hybrid agar sumber pembelajaran terbaca jelas. Anggota mengetahui materi mana yang dikelola di ekosistem sendiri dan mana yang berasal dari pihak lain.\n\n- Pokok bicara: Anggota dapat mendaftar, mengikuti urutan pelajaran dan kuis, serta melihat progres belajarnya. Riwayat ini membantu anggota mengelola komitmen belajar dan membantu pengurus memahami partisipasi secara lebih tertib. Dalam pendampingan, riwayat tersebut juga dapat menjadi dasar percakapan tentang materi yang perlu diperdalam berikutnya.\n\n- Pokok bicara: Completion record adalah bukti proses belajar yang dapat ditinjau, bukan sertifikasi otomatis. Video privat juga tidak diputar atau diselesaikan otomatis; keterlibatan dan penyelesaian tetap harus terjadi melalui proses yang benar.\n\n- Transisi: Nilai LMS menjadi lebih kuat ketika terhubung dengan informasi dan agenda.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "56934901-08d8-4786-80fd-f631e50418ae",
+    "position": 12,
+    "filepath": "src/pages/slides/Slide12.tsx",
+    "title": "Informasi, Agenda, dan LMS Saling Menguatkan",
+    "description": "Informasi, Agenda, dan LMS Saling Menguatkan",
+    "speakerNotes": "- Pembuka: Informasi, agenda, dan LMS dirancang untuk saling menguatkan, bukan berjalan sebagai tiga kanal terpisah. Nilainya muncul ketika anggota dapat berpindah dari mengetahui sesuatu menjadi mempelajarinya dan menerapkannya.\n\n- Pokok bicara: Agenda ASPEKINDO dapat menjadi pintu masuk menuju program belajar yang relevan. Sebuah kegiatan atau tema yang menarik perhatian anggota dapat langsung diikuti dengan materi yang membantu memperdalam pemahamannya.\n\n- Pokok bicara: Konten yang telah terbit menjadi referensi anggota, sementara kursus internal dikelola di platform agar proses dan progresnya lebih tertata. Dengan begitu, informasi tidak berhenti sebagai bacaan, tetapi memiliki jalur menuju penguatan kemampuan. Keterhubungan ini juga membantu pengurus melihat tema mana yang layak terus dikembangkan menjadi program.\n\n- Pokok bicara: Sumber eksternal tetap dibuka pada platform asal, tanpa klaim SSO atau integrasi resmi. Progres belajar memberi konteks pada kesiapan kompetensi, tetapi status dan ketentuan layanan eksternal tetap berada pada penyedia asal.\n\n- Transisi: Dari rangkaian data dan aktivitas ini, Dokumenproyek.com membantu menentukan prioritas tindakan.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "c988f55b-68fb-45ae-a16e-e032a9d6a222",
+    "position": 13,
+    "filepath": "src/pages/slides/Slide13.tsx",
+    "title": "Dokumenproyek.com: Insight untuk Membantu Menentukan Prioritas",
+    "description": "Dokumenproyek.com: Insight untuk Membantu Menentukan Prioritas",
+    "speakerNotes": "- Pembuka: Dokumenproyek.com adalah mesin insight internal yang membantu menyaring data menjadi prioritas yang lebih mudah ditindaklanjuti. Fokusnya bukan menghasilkan sebanyak mungkin saran, melainkan membantu anggota menentukan perhatian pertama.\n\n- Pokok bicara: Alurnya bergerak dari data, validasi, insight, rekomendasi, lalu tindakan. Artinya, saran tidak muncul tanpa dasar; data terlebih dahulu diperiksa sebelum diterjemahkan menjadi arah tindak lanjut.\n\n- Pokok bicara: Sistem membatasi keluaran hingga paling banyak tiga rekomendasi relevan dari katalog tindakan internal yang diizinkan. Batas ini membuat rekomendasi lebih fokus dan mencegah pengguna merasa dibanjiri daftar tugas yang tidak realistis.\n\n- Pokok bicara: Jika AI tidak valid, terlambat, atau gagal, fallback deterministik tetap memberi arah. Dalam semua kondisi, rekomendasi adalah bantuan prioritisasi, bukan keputusan profesional otomatis dan tetap memerlukan penilaian manusia.\n\n- Transisi: Agar bantuan tersebut dapat dipercaya, keandalannya dijaga di setiap tahap.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "d51c9372-f3cf-49ce-953c-91f2920d6e5f",
+    "position": 14,
+    "filepath": "src/pages/slides/Slide14.tsx",
+    "title": "Keandalan Insight Dijaga Sepanjang Siklusnya",
+    "description": "Keandalan Insight Dijaga Sepanjang Siklusnya",
+    "speakerNotes": "- Pembuka: Keandalan insight tidak cukup diperiksa saat fitur dibuat. Keandalan perlu dijaga sepanjang siklus rilis dan operasional, karena kondisi data maupun layanan dapat berubah setelah sistem digunakan.\n\n- Pokok bicara: Validator memeriksa kontrak insight, sedangkan gerbang build dan publikasi menahan perubahan yang belum lolos validasi. Ini membantu memastikan keluaran yang sampai ke pengguna memenuhi struktur dan batas yang telah ditetapkan.\n\n- Pokok bicara: Live probe memeriksa respons yang sudah dirilis. Monitoring kemudian membedakan kondisi ketika layanan terhubung dengan kondisi ketika sistem memakai fallback, sehingga tim tidak menganggap dua kondisi tersebut sebagai pengalaman yang sama. Informasi status ini membantu tim menjelaskan kondisi sistem secara jujur dan mengambil tindakan perbaikan yang sesuai.\n\n- Pokok bicara: Alert admin menggunakan identitas insiden, penguncian, deduplikasi siklus, dan resolusi terkontrol. Tujuannya agar insiden tidak tercatat ganda, tidak ditutup secara keliru, dan dapat ditangani dengan jejak yang jelas.\n\n- Transisi: Kontrol teknis ini dilengkapi dengan batas tata kelola yang disepakati sejak awal.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "33fb00f2-3cc0-4a1b-9999-2cc805214d5e",
+    "position": 15,
+    "filepath": "src/pages/slides/Slide15.tsx",
+    "title": "Tata Kelola dan Batas Klaim Dibangun Sejak Awal",
+    "description": "Tata Kelola dan Batas Klaim Dibangun Sejak Awal",
+    "speakerNotes": "- Pembuka: Kejelasan batas klaim penting agar manfaat PUB tidak disalahartikan sebagai kewenangan resmi. Platform yang baik perlu menjelaskan bukan hanya apa yang dapat dibantu, tetapi juga apa yang bukan fungsinya.\n\n- Pokok bicara: PUB tidak mengklaim sebagai kanal pengajuan resmi kepada LPJK atau Kementerian Pekerjaan Umum. Platform dapat membantu anggota menyiapkan informasi dan memahami langkah, sementara pengajuan resmi tetap harus dilakukan melalui kanal lembaga yang berwenang.\n\n- Pokok bicara: Platform juga tidak menjanjikan sertifikasi otomatis. Demikian pula, ketika pengguna diarahkan ke platform eksternal, hal itu bukan klaim SSO maupun integrasi resmi dengan penyedia tersebut. Bahasa yang hati-hati menjaga pengguna tetap memperoleh manfaat tanpa menerima janji yang tidak dapat dipenuhi.\n\n- Pokok bicara: Rujukan ISO atau kerangka anti-penyuapan dipakai untuk pembelajaran dan referensi. Rujukan tersebut memperkaya pemahaman, tetapi keputusan, pengesahan, atau penetapan resmi tetap berada pada institusi yang memiliki otoritas.\n\n- Transisi: Dengan batas yang jelas, kita dapat menilai manfaat PUB secara realistis bagi anggota dan organisasi.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "39b5da83-3d21-45ee-a740-80c2053ac9f4",
+    "position": 16,
+    "filepath": "src/pages/slides/Slide16.tsx",
+    "title": "Nilai bagi Anggota dan ASPEKINDO",
+    "description": "Nilai bagi Anggota dan ASPEKINDO",
+    "speakerNotes": "- Pembuka: Nilai PUB muncul ketika anggota dan pengurus menggunakan bahasa kesiapan yang sama. Dengan bahasa yang sama, kebutuhan dapat dibicarakan lebih konkret dan tindak lanjut dapat dipilih dengan lebih terarah.\n\n- Pokok bicara: Bagi anggota, PUB menawarkan jalur yang lebih jelas dari kebutuhan menuju tindakan. Anggota dapat mulai dari informasi yang relevan, melihat data yang perlu dilengkapi, belajar, lalu menindaklanjuti area yang menjadi prioritas. Dengan demikian, kemajuan kecil yang tercatat dapat terlihat sebagai bagian dari perjalanan kesiapan yang lebih besar.\n\n- Pokok bicara: Bagi pengurus, pengukuran menjadi lebih konsisten dan dapat ditelusuri. Sementara itu admin dapat mengelola informasi, agenda, program, LMS, dan monitoring dalam satu ekosistem kerja yang lebih terpadu.\n\n- Pokok bicara: Bagi organisasi, rekam pembelajaran dan pendampingan menjadi dasar data untuk menyusun program pengembangan yang lebih tepat sasaran. Ini bukan pengganti dialog dengan anggota, melainkan bahan yang lebih kuat untuk membangun dialog tersebut.\n\n- Transisi: Agar manfaat ini mudah dipahami, berikut alur demonstrasi yang disarankan.\n\n- Durasi: 1 menit 30 detik."
+  },
+  {
+    "id": "31a1158b-f8cc-4c3c-a3d1-35b5630cbc90",
+    "position": 17,
+    "filepath": "src/pages/slides/Slide17.tsx",
+    "title": "Skenario Demonstrasi yang Disarankan",
+    "description": "Skenario Demonstrasi yang Disarankan",
+    "speakerNotes": "- Pembuka: Demonstrasi sebaiknya mengikuti perjalanan anggota agar audiens melihat hubungan antarmodul, bukan fitur secara terpisah. Urutan ini juga membuat pesan platform lebih mudah diingat daripada sekadar berpindah dari satu layar ke layar lain.\n\n- Pokok bicara: Mulailah dari landing, informasi, dan agenda publik. Tunjukkan bagaimana pengunjung memperoleh konteks tanpa harus masuk terlebih dahulu. Kemudian masuk sebagai anggota dan buka dashboard workspace untuk memperlihatkan bahwa informasi awal dapat berlanjut menjadi pekerjaan yang terarah.\n\n- Pokok bicara: Lanjutkan ke LMS: pilih program, lakukan pendaftaran, tunjukkan urutan pelajaran dan kuis, lalu buka completion record. Jelaskan bahwa catatan ini merekam proses belajar yang dapat ditinjau, bukan sertifikasi otomatis dan bukan bukti kewenangan profesional.\n\n- Pokok bicara: Setelah itu, buka Peta 4 SIAP. Tunjukkan skor bersama cakupan data, sumber bukti, dan rekomendasi. Tekankan bahwa angka perlu dibaca bersama kelengkapannya, sedangkan rekomendasi hanya membantu menentukan prioritas dan bukan keputusan otomatis. Beri jeda sejenak pada sumber bukti agar audiens melihat hubungan langsung antara indikator, data, dan tindakan yang disarankan.\n\n- Pokok bicara: Akhiri dengan membuka tindak lanjut ke LKUT atau modul sumber, lalu tampilan monitoring. Bila koneksi atau data demo tidak siap, tetap jelaskan alur menggunakan data yang tersedia dan bedakan keadaan layanan terhubung dari fallback. Ulangi bahwa PUB bukan kanal layanan resmi. Sampaikan dengan tenang bahwa demonstrasi memperlihatkan dukungan proses, bukan pengganti verifikasi, pendampingan, atau keputusan institusi yang berwenang.\n\n- Transisi: Setelah memahami pengalaman utuhnya, kita tutup dengan usulan penerapan bertahap.\n\n- Durasi: 2 menit."
+  },
+  {
+    "id": "7f2e5bd2-252a-4597-9f31-6377668bebd1",
+    "position": 18,
+    "filepath": "src/pages/slides/Slide18.tsx",
+    "title": "Usulan Tahap Implementasi Bersama Anggota",
+    "description": "Usulan Tahap Implementasi Bersama Anggota",
+    "speakerNotes": "- Pembuka: Implementasi yang disarankan dimulai secara terbatas, diukur, lalu diperluas berdasarkan pembelajaran nyata. Pendekatan bertahap memberi ruang untuk membuktikan manfaat tanpa membebani anggota maupun tim pengelola.\n\n- Pokok bicara: Tahap awal dapat berupa pilot bersama BUJK anggota terpilih. Sejak awal, tetapkan RACI, SOP peninjauan, dan pemilik data yang jelas agar setiap pihak memahami siapa yang mengisi, memeriksa, mendampingi, dan mengambil tindak lanjut.\n\n- Pokok bicara: Ukur kelengkapan data, partisipasi LMS, progres, serta cakupan 4 SIAP. Perhatikan indikator yang paling sering kekurangan data; temuan itu menjadi bahan untuk memperbaiki panduan, pengalaman pengguna, atau program pendampingan. Gunakan umpan balik peserta pilot untuk memeriksa apakah istilah, urutan langkah, dan beban pengisian sudah mudah dipahami.\n\n- Pokok bicara: Setelah pola kerja stabil, peserta, agenda, kursus, dan operasi dapat diperluas secara bertahap. Keputusan perluasan sebaiknya bertumpu pada pembelajaran pilot dan kesiapan operasional, bukan hanya pada keinginan menambah fitur.\n\n- Pokok bicara: Tujuan akhirnya adalah budaya kesiapan, pembelajaran, pengukuran, dan perbaikan berkelanjutan. PUB menyediakan ruang dan jejak prosesnya, sedangkan keberhasilannya tetap dibangun bersama oleh anggota, pengurus, dan institusi berwenang sesuai perannya.\n\n- Transisi: Setelah ini, kita masuk ke sesi tanya jawab.\n\n- Durasi: 1 menit 30 detik. Total sesi utama: sekitar 27 menit."
+  }
+]

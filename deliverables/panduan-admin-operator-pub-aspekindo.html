@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panduan Admin & Operator PUB ASPEKINDO</title>
+  <style>
+    :root{--n:#07152f;--n2:#0e2b56;--b:#25a9e8;--a:#f4a621;--g:#168c68;--r:#ba3f45;--i:#172238;--m:#607089;--l:#dce4ee;--s:#f4f8fc}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#e9eff6;color:var(--i);font:15px/1.62 Arial,sans-serif}
+    .doc{width:min(1120px,100%);margin:auto;background:#fff;box-shadow:0 12px 50px #07152f24}.cover{min-height:92vh;padding:70px 64px;color:#fff;background:radial-gradient(circle at 85% 15%,#25a9e84a,transparent 28%),linear-gradient(135deg,#061127,#0d2a55 62%,#15507e);display:flex;flex-direction:column;justify-content:space-between}.brand{font-weight:900;letter-spacing:.06em}.brand:before{content:"";display:inline-block;width:26px;height:26px;margin-right:13px;vertical-align:middle;border:4px solid var(--b);border-radius:6px;transform:rotate(45deg)}.ey{color:var(--a);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.cover h1{max-width:850px;margin:14px 0 0;font-size:clamp(42px,7vw,76px);line-height:1;letter-spacing:-.045em}.cover p{max-width:760px;color:#ffffffc2;font-size:20px}.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.meta div{padding:14px;border:1px solid #ffffff2b;border-radius:12px;background:#ffffff10}.meta b{display:block;color:var(--a)}main{padding:0 64px 70px}section{padding:58px 0 12px;scroll-margin-top:15px}h2{margin:5px 0 18px;color:var(--n);font-size:35px;line-height:1.12;letter-spacing:-.025em}h3{margin:29px 0 10px;color:var(--n2);font-size:22px}h4{margin:18px 0 6px;color:var(--n);font-size:17px}p{margin:8px 0 13px}.intro{max-width:800px;color:var(--m);font-size:17px}.toc,.g2,.g3{display:grid;gap:12px}.toc,.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.toc a{display:flex;gap:10px;align-items:center;min-height:55px;padding:12px 14px;color:var(--i);text-decoration:none;border:1px solid var(--l);border-radius:11px;background:var(--s)}.toc b{color:var(--b)}.card{padding:18px;border:1px solid var(--l);border-radius:14px;background:#fff}.card h3,.card h4{margin-top:0}.blue{border-top:5px solid var(--b)}.amber{border-top:5px solid var(--a)}.green{border-top:5px solid var(--g)}.red{border-top:5px solid var(--r)}.steps{padding:0;list-style:none;counter-reset:x}.steps li{position:relative;margin:0 0 10px;padding:14px 16px 14px 54px;border:1px solid var(--l);border-radius:11px;background:var(--s);counter-increment:x}.steps li:before{content:counter(x);position:absolute;left:14px;top:12px;width:29px;height:29px;display:grid;place-items:center;border-radius:50%;color:#fff;background:var(--b);font-weight:900}.steps strong{color:var(--n)}.call{margin:20px 0;padding:16px 18px;border-left:5px solid var(--b);border-radius:0 10px 10px 0;background:#e5f6ff}.call.warn{border-color:var(--a);background:#fff6e3}.call.danger{border-color:var(--r);background:#fff0f1}.call.good{border-color:var(--g);background:#e9f8f3}table{width:100%;margin:15px 0 22px;border-collapse:collapse;font-size:13.5px}th,td{padding:10px 11px;text-align:left;vertical-align:top;border:1px solid var(--l)}th{color:#fff;background:var(--n2)}tr:nth-child(even) td{background:var(--s)}.tag{display:inline-block;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:900}.admin{color:#07537d;background:#daf2ff}.super{color:#7a4c00;background:#fff0ca}.member{color:#17634c;background:#def5ec}.draft{color:#5e6470;background:#e8ebef}.publish{color:#17634c;background:#def5ec}.archive{color:#76536d;background:#f1e6ee}.check{padding:0;list-style:none}.check li{position:relative;margin:6px 0;padding-left:25px}.check li:before{content:"✓";position:absolute;left:0;color:var(--g);font-weight:900}.route{padding:2px 6px;border-radius:5px;background:#eef3f8;font-family:monospace;font-size:12px}.pagebreak{page-break-before:always}.foot{margin-top:50px;padding-top:20px;color:var(--m);border-top:1px solid var(--l);font-size:12px}
+    @media(max-width:760px){.cover,main{padding-left:24px;padding-right:24px}.toc,.g2,.g3,.meta{grid-template-columns:1fr}table{display:block;overflow:auto}}
+    @media print{@page{size:A4;margin:13mm}body{background:#fff;font-size:10pt}.doc{width:100%;box-shadow:none}.cover{min-height:260mm;padding:25mm 17mm;page-break-after:always}main{padding:0}section{padding:10mm 0 0}h2{font-size:23pt}h3{font-size:15pt}.card,.call,.steps li,tr{break-inside:avoid}a{text-decoration:none;color:inherit}}
+  </style>
+</head>
+<body><article class="doc">
+  <header class="cover">
+    <div class="brand">PUB ASPEKINDO</div>
+    <div><span class="ey">Manual Operasional Lengkap</span><h1>Panduan Admin & Operator</h1><p>Prosedur mengelola pengguna, konten, LMS, verifikasi, marketplace, laporan, serta kontrol mutu sebelum publikasi.</p>
+      <div class="meta"><div><b>Sasaran</b>Super Admin, Admin Operasional, Operator</div><div><b>Prinsip</b>Draft → Periksa → Terbit → Verifikasi</div><div><b>Keamanan</b>Akses minimum dan bukti kerja</div></div>
+    </div><small>Versi September 2026 · Gunakan bersama Panduan Pengguna PUB ASPEKINDO</small>
+  </header>
+  <main>
+    <section><span class="ey">Daftar isi</span><h2>Bagian Panduan</h2>
+      <nav class="toc">
+        <a href="#peran"><b>01</b> Peran dan kewenangan</a><a href="#rutinitas"><b>02</b> Rutinitas operator</a>
+        <a href="#dashboard"><b>03</b> Dashboard dan Corporate</a><a href="#users"><b>04</b> Pengguna, akses, konflik</a>
+        <a href="#konten"><b>05</b> Informasi, agenda, program</a><a href="#lms"><b>06</b> LMS dan pembelajaran</a>
+        <a href="#sertifikat"><b>07</b> Modul, soal, sertifikat</a><a href="#pancek"><b>08</b> PANCEK dan compliance</a>
+        <a href="#market"><b>09</b> Marketplace dan pesanan</a><a href="#direktori"><b>10</b> Direktori dan peserta</a>
+        <a href="#inovasi"><b>11</b> Inovasi dan proposal</a><a href="#notifikasi"><b>12</b> Notifikasi dan komunikasi</a>
+        <a href="#ekspor"><b>13</b> Ekspor dan bukti kerja</a><a href="#publish"><b>14</b> Checklist publikasi</a>
+        <a href="#insiden"><b>15</b> Masalah dan insiden</a><a href="#sop"><b>16</b> SOP ringkas</a>
+      </nav>
+    </section>
+
+    <section id="peran"><span class="ey">01 · Tata kelola akses</span><h2>Siapa boleh melakukan apa?</h2>
+      <div class="g3">
+        <div class="card amber"><span class="tag super">Super Admin</span><h3>Pengendali akses</h3><p>Memiliki kemampuan Admin Operasional serta memberi atau mencabut akses admin dan menangani permintaan akses.</p></div>
+        <div class="card blue"><span class="tag admin">Admin Operasional</span><h3>Pengelola layanan</h3><p>Mengelola konten, LMS, verifikasi, dashboard, marketplace, peserta, laporan, dan ekspor. Tidak mengubah role utama.</p></div>
+        <div class="card green"><span class="tag member">Anggota</span><h3>Pengguna layanan</h3><p>Mengelola data sendiri, belajar, mengisi assessment, LKUT, SMAP/PANCEK, proyek, marketplace, dan proposal.</p></div>
+      </div>
+      <table><thead><tr><th>Kegiatan</th><th>Super Admin</th><th>Admin/Operator</th><th>Anggota</th></tr></thead><tbody>
+        <tr><td>Kelola akses admin</td><td>Ya</td><td>Tidak</td><td>Tidak</td></tr><tr><td>Kelola konten dan LMS</td><td>Ya</td><td>Ya</td><td>Tidak</td></tr>
+        <tr><td>Verifikasi PANCEK</td><td>Ya</td><td>Ya</td><td>Mengajukan</td></tr><tr><td>Corporate Dashboard</td><td>Ya</td><td>Ya</td><td>Tidak</td></tr>
+        <tr><td>Data pribadi/member</td><td>Sesuai tugas</td><td>Sesuai tugas</td><td>Milik sendiri</td></tr>
+      </tbody></table>
+      <div class="call danger"><strong>Aturan minimum:</strong> gunakan akun admin hanya untuk pekerjaan admin. Untuk menguji pengalaman anggota, gunakan akun anggota terpisah. Jangan membagikan akun atau kata sandi.</div>
+    </section>
+
+    <section id="rutinitas"><span class="ey">02 · Cara kerja</span><h2>Rutinitas operator yang disarankan</h2>
+      <div class="g3">
+        <div class="card blue"><h3>Harian</h3><ul class="check"><li>Periksa permintaan dan item menunggu verifikasi.</li><li>Periksa konten atau agenda mendesak.</li><li>Tinjau pesanan bermasalah.</li><li>Catat insiden.</li></ul></div>
+        <div class="card green"><h3>Mingguan</h3><ul class="check"><li>Tinjau KPI dashboard.</li><li>Periksa progres LMS.</li><li>Validasi link publik.</li><li>Tinjau produk dan proposal baru.</li></ul></div>
+        <div class="card amber"><h3>Bulanan</h3><ul class="check"><li>Ekspor laporan yang diperlukan.</li><li>Audit admin aktif.</li><li>Arsipkan konten usang.</li><li>Tinjau data BUJK dan konflik jabatan.</li></ul></div>
+      </div>
+      <div class="call"><strong>Alur operasi standar:</strong> Siapkan → Simpan Draft → Preview → Validasi → Terbitkan → Uji sebagai anggota → Catat hasil.</div>
+    </section>
+
+    <section id="dashboard"><span class="ey">03 · Monitoring</span><h2>Dashboard Admin dan Corporate</h2>
+      <h3>Admin Dashboard <span class="route">/admin</span></h3>
+      <ol class="steps"><li>Masuk menggunakan akun admin aktif.</li><li>Buka <strong>Admin Dashboard</strong>.</li><li>Baca KPI dan kartu ringkasan.</li><li>Klik modul sumber untuk memeriksa detail.</li><li>Muat ulang setelah melakukan perubahan.</li></ol>
+      <div class="call warn">Jangan mengambil keputusan hanya dari angka ringkasan. Buka daftar sumber untuk memastikan periode, pemilik data, status, dan jumlah baris.</div>
+      <h3>Corporate Dashboard <span class="route">/corporate</span></h3>
+      <ol class="steps"><li>Tinjau Total Users, skor rata-rata/KCI, distribusi level, dan domain.</li><li>Cari atau filter BUJK.</li><li>Buka detail BUJK.</li><li>Periksa SBU, LKUT, PANCEK, SMAP, proyek, dan compliance.</li><li>Pastikan tahun laporan dan tanggal masa berlaku benar.</li><li>Gunakan <strong>Export Compliance PDF</strong> jika dibutuhkan.</li></ol>
+      <table><thead><tr><th>Status SBU</th><th>Makna operasional</th><th>Tindakan</th></tr></thead><tbody><tr><td>Valid</td><td>Tanggal masih di luar ambang pengingat.</td><td>Tetap cocokkan dengan dokumen.</td></tr><tr><td>Akan berakhir</td><td>Sekitar 90 hari atau kurang.</td><td>Hubungi pemilik data dan siapkan tindak lanjut.</td></tr><tr><td>Expired</td><td>Tanggal telah lewat.</td><td>Verifikasi dokumen terbaru dan arahkan proses resmi.</td></tr><tr><td>Missing</td><td>Nomor/tanggal belum tersedia.</td><td>Minta anggota melengkapi data.</td></tr></tbody></table>
+    </section>
+
+    <section id="users" class="pagebreak"><span class="ey">04 · Pengguna dan akses</span><h2>Mengelola akun, role, dan konflik</h2>
+      <h3>Daftar pengguna <span class="route">/admin/users</span></h3>
+      <ol class="steps"><li>Buka menu <strong>Users</strong>.</li><li>Cari nama, email, atau perusahaan.</li><li>Periksa identitas dan status akun.</li><li>Buka detail atau aksi yang tersedia.</li><li>Simpan, lalu muat ulang untuk memastikan perubahan terlihat.</li></ol>
+      <div class="call">Halaman Users digunakan untuk peninjauan akun. Perubahan role admin dilakukan melalui <strong>Kelola Akses Admin</strong>.</div>
+      <h3>Kelola Akses Admin <span class="route">/admin/akses</span></h3>
+      <p><span class="tag super">Super Admin saja</span></p>
+      <ol class="steps"><li>Cari nama, email, atau BUJK.</li><li>Periksa badge Pengguna, Admin Operasional, atau Super Admin utama.</li><li>Untuk memberi akses, tekan <strong>Jadikan admin</strong>, lalu <strong>Berikan akses</strong>.</li><li>Untuk mencabut, tekan <strong>Cabut akses</strong>, lalu konfirmasi.</li><li>Masuk kembali menggunakan akun yang diubah untuk memastikan hak akses tepat.</li></ol>
+      <div class="call danger">Super Admin utama bersifat permanen. Jangan memberi akses admin hanya agar pengguna dapat melihat data lebih banyak. Akses harus berdasarkan tugas.</div>
+      <h3>Permintaan <span class="route">/admin/permintaan</span></h3>
+      <ol class="steps"><li>Buka daftar permintaan.</li><li>Periksa pemohon, organisasi, alasan, dan kebutuhan.</li><li>Konfirmasi kepada penanggung jawab bila informasi belum cukup.</li><li>Pilih setujui atau tolak.</li><li>Pastikan status berubah dan komunikasikan hasil.</li></ol>
+      <h3>Konflik jabatan <span class="route">/admin/role-conflicts</span></h3>
+      <ol class="steps"><li>Buka <strong>Laporan Konflik Jabatan</strong>.</li><li>Periksa perusahaan dan anggota yang ditandai.</li><li>Cocokkan dengan data organisasi.</li><li>Minta koreksi pada sumber data.</li><li>Gunakan <strong>Export PDF</strong> untuk tindak lanjut internal.</li></ol>
+    </section>
+
+    <section id="konten"><span class="ey">05 · Komunikasi publik</span><h2>Informasi, agenda, dan program</h2>
+      <h3>Pusat Informasi <span class="route">/admin/informasi</span></h3>
+      <ol class="steps"><li>Tekan <strong>Tambah</strong> atau pilih <strong>Edit</strong>.</li><li>Isi judul, kategori, isi, ringkasan, dan metadata yang diminta.</li><li>Cantumkan sumber dan tanggal untuk informasi regulasi.</li><li>Simpan sebagai draft jika belum final.</li><li>Periksa tampilan daftar dan detail publik.</li><li>Terbitkan hanya setelah pemeriksaan isi dan tautan.</li></ol>
+      <h3>Agenda <span class="route">/admin/aspekindo-agenda</span></h3>
+      <ol class="steps"><li>Tekan <strong>Tambah Agenda</strong>.</li><li>Isi judul, waktu, lokasi/media, deskripsi, dan tautan pendaftaran.</li><li>Pilih <strong>Draft</strong>, <strong>Terbit</strong>, atau <strong>Diarsipkan</strong>.</li><li>Jika terhubung ke LMS, pastikan kursusnya juga sudah terbit.</li><li>Simpan dan uji tombol pendaftaran.</li><li>Periksa halaman publik setelah menerbitkan.</li></ol>
+      <h3>Program & Kegiatan <span class="route">/admin/program-kegiatan</span></h3>
+      <ol class="steps"><li>Tambah atau edit program.</li><li>Isi detail, jadwal, status, media, dan link HTTPS.</li><li>Simpan draft dan buka halaman detail.</li><li>Periksa ejaan, tanggal, gambar, dan CTA.</li><li>Terbitkan; arsipkan program yang sudah tidak relevan.</li></ol>
+      <table><thead><tr><th>Status</th><th>Terlihat oleh</th><th>Kapan digunakan</th></tr></thead><tbody><tr><td><span class="tag draft">Draft</span></td><td>Admin</td><td>Masih disusun atau diperiksa.</td></tr><tr><td><span class="tag publish">Terbit</span></td><td>Publik/anggota sesuai akses</td><td>Sudah lengkap dan valid.</td></tr><tr><td><span class="tag archive">Diarsipkan</span></td><td>Admin</td><td>Tidak aktif tetapi riwayat perlu disimpan.</td></tr></tbody></table>
+    </section>
+
+    <section id="lms" class="pagebreak"><span class="ey">06 · Pembelajaran</span><h2>Mengelola LMS dari awal sampai terbit</h2>
+      <h3>A. Membuat kursus <span class="route">/admin/aspekindo-lms/kursus</span></h3>
+      <ol class="steps"><li>Siapkan tujuan, audience, struktur, materi, dan kriteria lulus.</li><li>Tekan <strong>Tambah kursus</strong>.</li><li>Isi Judul, Slug unik, Deskripsi Markdown, dan Audience.</li><li>Aktifkan <strong>Khusus anggota aktif</strong> jika diperlukan.</li><li>Simpan sebagai <strong>Draft</strong>.</li><li>Tambahkan sesi, pelajaran, materi, dan kuis.</li><li>Gunakan <strong>Preview</strong>.</li><li>Jika sudah lengkap, pilih <strong>Terbitkan</strong>.</li></ol>
+      <h3>B. Menambahkan sesi</h3>
+      <ol class="steps"><li>Pilih kursus lalu <strong>Tambah sesi</strong>.</li><li>Isi judul, deskripsi, waktu, dan urutan.</li><li>Pilih jalur Internal PUB, Eksternal, atau Hybrid.</li><li>Jika eksternal, gunakan URL HTTPS dan uji tab tujuan.</li><li>Simpan dan periksa urutan sesi.</li></ol>
+      <h3>C. Pelajaran dan materi</h3>
+      <div class="g2"><div class="card blue"><h4>Pelajaran</h4><ol class="steps"><li>Tambah pelajaran.</li><li>Isi judul, slug, Markdown, passing score, dan urutan.</li><li>Hubungkan ke sesi.</li><li>Aktifkan <strong>Terbitkan pelajaran</strong>.</li></ol></div><div class="card green"><h4>Materi</h4><ol class="steps"><li>Tambah materi.</li><li>Pilih Teks Markdown atau Tautan HTTPS.</li><li>Isi konten dan urutan.</li><li>Aktifkan <strong>Terbitkan materi</strong>.</li></ol></div></div>
+      <h3>D. Kuis</h3>
+      <ol class="steps"><li>Pilih pelajaran, lalu tekan <strong>Tambah soal</strong>.</li><li>Isi pertanyaan dan seluruh opsi.</li><li>Pilih satu jawaban benar.</li><li>Isi penjelasan, poin, dan urutan.</li><li>Simpan dan uji sebagai peserta.</li></ol>
+      <div class="call warn">Kesalahan paling umum: kursus sudah Terbit tetapi pelajaran atau materi masih belum diaktifkan. Periksa status pada setiap tingkat.</div>
+      <h3>E. Peserta, progres, dan completion</h3>
+      <ol class="steps"><li>Buka daftar peserta kursus.</li><li>Cari berdasarkan nama, perusahaan, kursus, atau status.</li><li>Periksa lesson completed dan persentase progres.</li><li>Periksa completion record.</li><li>Tindak lanjuti peserta yang belum selesai.</li><li>Jangan membuat completion manual tanpa bukti.</li></ol>
+    </section>
+
+    <section id="sertifikat"><span class="ey">07 · Bank konten dan bukti belajar</span><h2>Modul, pertanyaan, dan sertifikat</h2>
+      <h3>Modules <span class="route">/admin/modules</span></h3><p>Gunakan untuk modul pembelajaran lama/native. Isi nama, domain, urutan, materi, dan status sesuai form. Setelah menyimpan, periksa akses anggota.</p>
+      <h3>Bank pertanyaan <span class="route">/admin/questions</span></h3>
+      <ol class="steps"><li>Tekan <strong>Tambah/Edit Question</strong>.</li><li>Isi pertanyaan, opsi, jawaban, dan poin.</li><li>Simpan lalu uji assessment.</li><li>Hindari perubahan besar saat assessment peserta sedang berlangsung.</li></ol>
+      <h3>Sertifikat <span class="route">/admin/certificates</span></h3>
+      <ol class="steps"><li>Buka <strong>Sertifikat Diterbitkan</strong>.</li><li>Cari nama, perusahaan, atau nomor sertifikat.</li><li>Periksa level, nomor, dan tanggal.</li><li>Gunakan <strong>Export CSV</strong> jika diperlukan.</li></ol>
+      <div class="call">Sertifikat pada aplikasi adalah sertifikat atau catatan pencapaian internal sesuai program. Jangan menyebutnya SBU, SKK, ISO, atau sertifikat lembaga lain.</div>
+    </section>
+
+    <section id="pancek"><span class="ey">08 · Verifikasi</span><h2>PANCEK, SMAP, dan compliance</h2>
+      <h3>Verifikasi PANCEK <span class="route">/admin/pancek</span></h3>
+      <ol class="steps"><li>Filter status <strong>Menunggu Verifikasi</strong>.</li><li>Pilih submission BUJK.</li><li>Periksa perusahaan, periode, NPWP, NIB, jawaban, skor, dan evidence.</li><li>Isi <strong>Catatan Verifikasi</strong>.</li><li>Pilih verifikasi/setujui atau tolak.</li><li>Konfirmasi status dan periksa notifikasi anggota.</li><li>Gunakan Export Excel/PDF untuk arsip bila dibutuhkan.</li></ol>
+      <table><thead><tr><th>Perubahan status</th><th>Makna</th><th>Operator</th></tr></thead><tbody><tr><td>Draft → Submitted</td><td>Anggota mengirim untuk ditinjau.</td><td>Belum mengambil keputusan sebelum submitted.</td></tr><tr><td>Submitted → Verified</td><td>Data diterima dalam alur verifikasi.</td><td>Wajib memeriksa evidence dan memberi catatan.</td></tr><tr><td>Submitted → Rejected</td><td>Perlu perbaikan.</td><td>Jelaskan kekurangan yang dapat ditindaklanjuti.</td></tr></tbody></table>
+      <div class="call danger">Jangan memverifikasi data kosong, salah periode, atau tidak memiliki bukti. Verifikasi internal bukan penerbitan sertifikat resmi oleh regulator.</div>
+      <h3>SMAP dan compliance</h3><p>Anggota mengisi SMAP, LKUT, K3, risiko, proyek, dan anggaran. Operator meninjau hasil lintas anggota melalui Corporate Dashboard dan detail BUJK. Cocokkan nomor, tanggal, masa berlaku, pemilik data, dan evidence sebelum memakai status untuk laporan.</p>
+    </section>
+
+    <section id="market"><span class="ey">09 · Transaksi</span><h2>Marketplace, pesanan, dan statistik</h2>
+      <h3>Moderasi produk <span class="route">/admin/marketplace</span></h3>
+      <ol class="steps"><li>Periksa produk baru.</li><li>Tinjau judul, kategori, harga, stok, deskripsi, gambar, pemilik, dan link.</li><li>Pastikan tidak ada klaim menyesatkan atau data sensitif.</li><li>Aktifkan hanya produk yang layak.</li><li>Nonaktifkan produk yang usang atau bermasalah tanpa menghapus riwayat transaksi.</li></ol>
+      <h3>Pesanan <span class="route">/admin/pesanan</span></h3>
+      <table><thead><tr><th>Status</th><th>Aksi normal</th></tr></thead><tbody><tr><td>Pending</td><td>Penjual Konfirmasi atau Tolak.</td></tr><tr><td>Confirmed</td><td>Penjual memproses lalu Tandai Dikirim.</td></tr><tr><td>Shipped</td><td>Pembeli mengonfirmasi Selesai Diterima.</td></tr><tr><td>Completed</td><td>Transaksi selesai.</td></tr><tr><td>Cancelled</td><td>Pesanan dibatalkan; simpan alasan.</td></tr></tbody></table>
+      <div class="call warn">Jangan mengubah status pesanan tanpa bukti komunikasi, pembayaran, atau pengiriman sesuai kebijakan operasional.</div>
+      <h3>Statistik <span class="route">/admin/statistik</span></h3><p>Pilih periode, baca KPI/grafik, lalu cocokkan dengan daftar pesanan sebelum digunakan dalam laporan keuangan atau manajemen.</p>
+    </section>
+
+    <section id="direktori"><span class="ey">10 · Data organisasi</span><h2>Direktori, peserta, dan galeri</h2>
+      <ol class="steps"><li>Buka direktori atau pengelolaan peserta.</li><li>Tambah atau import peserta.</li><li>Validasi nama, perusahaan, peran, dan identitas yang diperlukan.</li><li>Periksa duplikat sebelum menyimpan.</li><li>Gunakan Edit untuk koreksi.</li><li>Buka detail BUJK dan tinjau galeri.</li><li>Unggah foto dengan keterangan yang jelas dan format yang didukung.</li></ol>
+      <div class="call danger"><strong>Privasi:</strong> jangan mempublikasikan nomor identitas, kontak pribadi, dokumen legal, atau informasi lain yang tidak diperlukan untuk direktori publik.</div>
+    </section>
+
+    <section id="inovasi"><span class="ey">11 · Review</span><h2>Proposal dan Inovasi PUB</h2>
+      <ol class="steps"><li>Buka <strong>Review Inovasi</strong> <span class="route">/admin/inovasi</span>.</li><li>Filter proposal dan status.</li><li>Buka detail pemohon, masalah, solusi, evidence, dan kelayakan.</li><li>Periksa duplikasi dengan proposal lain.</li><li>Pastikan ada pemilik dan rencana tindak lanjut.</li><li>Pilih status/aksi yang tersedia dan simpan catatan reviewer.</li><li>Periksa hasilnya pada Rangkuman Admin.</li></ol>
+      <div class="call warn">Jangan menyetujui proposal hanya karena idenya menarik. Periksa bukti kebutuhan, keamanan data, biaya, pemilik, dan kemampuan pelaksanaan.</div>
+    </section>
+
+    <section id="notifikasi"><span class="ey">12 · Komunikasi sistem</span><h2>Notifikasi dan tindak lanjut</h2>
+      <p>Notifikasi bersifat per akun. Tidak ditemukan fitur broadcast admin umum pada alur saat ini.</p>
+      <ul class="check"><li>Pastikan verifikasi atau penolakan PANCEK menghasilkan notifikasi untuk anggota terkait.</li><li>Periksa notifikasi sertifikat atau kenaikan level jika alurnya digunakan.</li><li>Jangan menganggap satu anggota dapat melihat notifikasi anggota lain.</li><li>Untuk pengumuman umum, gunakan Pusat Informasi, Agenda, atau kanal komunikasi organisasi.</li></ul>
+    </section>
+
+    <section id="ekspor"><span class="ey">13 · Akuntabilitas</span><h2>Ekspor dan bukti kerja operator</h2>
+      <table><thead><tr><th>Area</th><th>Ekspor</th><th>Sebelum mengunduh</th></tr></thead><tbody>
+        <tr><td>PANCEK</td><td>Excel/PDF</td><td>Filter periode/status dan periksa jumlah submission.</td></tr>
+        <tr><td>Sertifikat</td><td>CSV</td><td>Periksa nomor, nama, level, dan tanggal.</td></tr>
+        <tr><td>Konflik jabatan</td><td>PDF</td><td>Verifikasi konflik dengan data sumber.</td></tr>
+        <tr><td>Corporate compliance</td><td>PDF</td><td>Periksa BUJK, tahun LKUT, dan masa berlaku SBU.</td></tr>
+      </tbody></table>
+      <h3>Standar penyimpanan</h3><ul class="check"><li>Gunakan nama file berisi jenis laporan, periode, dan tanggal ekspor.</li><li>Simpan pada repositori resmi organisasi.</li><li>Batasi akses berdasarkan kebutuhan.</li><li>Jangan mengirim data pribadi melalui grup publik.</li><li>Catat siapa yang membuat dan menerima ekspor.</li></ul>
+    </section>
+
+    <section id="publish" class="pagebreak"><span class="ey">14 · Quality gate</span><h2>Checklist wajib sebelum publikasi</h2>
+      <ol class="steps"><li>Pastikan akun dan kewenangan operator sesuai.</li><li>Periksa pemilik, audience, periode, status, dan pembatasan anggota aktif.</li><li>Lengkapi judul, slug unik, deskripsi, tanggal, urutan, passing score, dan jawaban kuis.</li><li>Pastikan seluruh tautan memakai HTTPS dan dapat dibuka.</li><li>Simpan sebagai <strong>Draft</strong>.</li><li>Buka <strong>Preview</strong> dan periksa desktop serta ponsel.</li><li>Periksa status kursus, sesi, pelajaran, dan materi satu per satu.</li><li>Uji menggunakan akun anggota, bukan hanya akun admin.</li><li>Untuk agenda, pastikan kursus terkait juga sudah terbit.</li><li>Tekan <strong>Terbitkan</strong> satu kali dan tunggu sampai selesai.</li><li>Muat ulang halaman publik/member dan periksa hasil.</li><li>Catat operator, waktu, perubahan, dan hasil pemeriksaan.</li></ol>
+      <div class="call good"><strong>Siap terbit jika:</strong> isi lengkap, sumber jelas, tautan berfungsi, akses tepat, tampilan anggota sudah diuji, dan tidak ada klaim yang melampaui kemampuan aplikasi.</div>
+    </section>
+
+    <section id="insiden"><span class="ey">15 · Penanganan masalah</span><h2>Jika terjadi kesalahan atau insiden</h2>
+      <table><thead><tr><th>Masalah</th><th>Tindakan pertama</th><th>Jangan dilakukan</th></tr></thead><tbody>
+        <tr><td>Konten salah terbit</td><td>Ubah ke Draft/Arsip, catat koreksi, lalu periksa halaman publik.</td><td>Menghapus tanpa menyimpan bukti perubahan.</td></tr>
+        <tr><td>Link rusak</td><td>Perbaiki URL HTTPS dan uji di tab privat.</td><td>Menganggap link bekerja karena dapat dibuka oleh admin.</td></tr>
+        <tr><td>Salah memberi akses admin</td><td>Super Admin mencabut akses dan meninjau aktivitas terkait.</td><td>Membagikan akun lain sebagai pengganti.</td></tr>
+        <tr><td>Salah verifikasi PANCEK</td><td>Catat kejadian, hentikan tindak lanjut, dan eskalasi ke penanggung jawab.</td><td>Mengubah riwayat tanpa catatan.</td></tr>
+        <tr><td>Data tidak muncul</td><td>Muat ulang, periksa filter/periode/status, lalu periksa modul sumber.</td><td>Mengisi ulang berulang kali.</td></tr>
+        <tr><td>Pesanan sengketa</td><td>Bekukan perubahan status dan kumpulkan bukti komunikasi/transaksi.</td><td>Menyelesaikan status tanpa persetujuan pihak terkait.</td></tr>
+      </tbody></table>
+      <h3>Catatan insiden minimum</h3><ul class="check"><li>Waktu kejadian.</li><li>Akun dan peran operator.</li><li>Menu serta data yang terdampak.</li><li>Langkah sebelum masalah muncul.</li><li>Pesan error atau tangkapan layar tanpa rahasia.</li><li>Tindakan sementara dan penanggung jawab.</li><li>Hasil penyelesaian.</li></ul>
+    </section>
+
+    <section id="sop"><span class="ey">16 · Ringkasan meja kerja</span><h2>SOP satu halaman untuk operator</h2>
+      <div class="g2">
+        <div class="card blue"><h3>Awal hari</h3><ol class="steps"><li>Masuk dengan akun sendiri.</li><li>Periksa dashboard.</li><li>Periksa item menunggu.</li><li>Tentukan tiga prioritas.</li></ol></div>
+        <div class="card green"><h3>Saat mengelola data</h3><ol class="steps"><li>Periksa pemilik dan periode.</li><li>Simpan draft.</li><li>Validasi bukti.</li><li>Catat perubahan.</li></ol></div>
+        <div class="card amber"><h3>Saat menerbitkan</h3><ol class="steps"><li>Preview.</li><li>Uji link.</li><li>Uji sebagai anggota.</li><li>Terbitkan sekali.</li></ol></div>
+        <div class="card red"><h3>Akhir hari</h3><ol class="steps"><li>Periksa pekerjaan selesai.</li><li>Catat item tertunda.</li><li>Simpan ekspor aman.</li><li>Keluar dari akun.</li></ol></div>
+      </div>
+      <div class="call"><strong>Prinsip akhir:</strong> admin menjaga akses dan kebijakan; operator menjaga ketelitian data dan layanan; anggota tetap menjadi pemilik data usahanya; keputusan resmi tetap berada pada lembaga berwenang.</div>
+    </section>
+    <p class="foot">Panduan ini mengikuti fitur yang tersedia pada saat penyusunan. Nama menu dan kewenangan dapat berkembang. Untuk tindakan berdampak tinggi—akses admin, verifikasi, publikasi, dan data pribadi—ikuti SOP organisasi dan prinsip akses minimum.</p>
+  </main>
+</article></body></html>

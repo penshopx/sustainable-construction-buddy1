@@ -1,0 +1,103 @@
+name: Competency insight validation
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-assessment-concurrency:
+    name: Validate concurrent assessment submission
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Install PostgreSQL client
+        run: sudo apt-get update && sudo apt-get install --yes postgresql-client
+
+      - name: Start local Supabase
+        run: supabase start
+
+      - name: Test concurrent assessment submission
+        run: npm run test:assessment:concurrency
+
+  validate-insight:
+    name: Validate competency insight
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run the standard insight validation
+        run: npm run test:insight:validate
+
+  validate-frontend:
+    name: Validate frontend
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck frontend
+        run: npm run typecheck
+
+      - name: Lint frontend
+        run: npm run lint
+
+      - name: Build frontend
+        run: npm run build
+
+      - name: Run frontend routing smoke test
+        env:
+          VITE_SUPABASE_URL: https://ci-playwright.supabase.co
+          VITE_SUPABASE_PUBLISHABLE_KEY: ci-placeholder-publishable-key
+        run: npm run test:routing
+
+      - name: Run authenticated frontend smoke tests, including LMS
+        env:
+          VITE_SUPABASE_URL: https://ci-playwright.supabase.co
+          VITE_SUPABASE_PUBLISHABLE_KEY: ci-placeholder-publishable-key
+          PLAYWRIGHT_SUPABASE_PROJECT_REF: ci-playwright
+        run: npm run test:auth
+
+      - name: Upload authenticated Playwright artifacts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: authenticated-playwright-results
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 7

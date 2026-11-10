@@ -1,0 +1,1 @@
+ALTER TABLE public.certificates ADD COLUMN module_name text NOT NULL DEFAULT '';

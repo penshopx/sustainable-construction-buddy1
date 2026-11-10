@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/ruang-simpan/"
+title = "Ruang Simpan"
+description = "Memori bisnis mandiri untuk menyimpan dan mencari dokumen perusahaan, mengelola folder dan profil perusahaan, serta bertanya berdasarkan dokumen pribadi."
+version = "1.0.0"
+id = "artifacts/ruang-simpan"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/ruang-simpan/" ]
+localPort = 22420
+
+[services.development]
+run = "pnpm --filter @workspace/ruang-simpan run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ruang-simpan", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ruang-simpan/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22420"
+BASE_PATH = "/ruang-simpan/"

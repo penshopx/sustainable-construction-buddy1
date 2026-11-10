@@ -1,0 +1,1 @@
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS bujk_qualification text NOT NULL DEFAULT 'menengah';

@@ -1,0 +1,28 @@
+kind = "slides"
+previewPath = "/slide1/"
+title = "Presentasi PUB ASPEKINDO"
+description = "Presentasi eksekutif 18 slide untuk anggota ASPEKINDO mengenai ekosistem, perjalanan anggota, modul utama, tata kelola, dan rencana implementasi PUB ASPEKINDO."
+version = "1.0.0"
+id = "artifacts/pub-aspekindo-presentation"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/slide1/" ]
+localPort = 22983
+
+[services.development]
+run = "pnpm --filter @workspace/pub-aspekindo-presentation run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/pub-aspekindo-presentation", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/pub-aspekindo-presentation/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22983"
+BASE_PATH = "/slide1/"

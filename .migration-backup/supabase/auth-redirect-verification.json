@@ -1,0 +1,26 @@
+{
+  "verifiedAt": "2026-08-28T02:17:51.690Z",
+  "projectRef": "yidlglstzvizsszrpobi",
+  "activeOrigin": "https://0bf1f3c7-899a-4fa8-a323-4cda600b8c0d-00-29sn3di1iyfgy-m5n94n6u.sisko.replit.dev",
+  "authConfig": {
+    "siteUrl": "https://0bf1f3c7-899a-4fa8-a323-4cda600b8c0d-00-29sn3di1iyfgy-m5n94n6u.sisko.replit.dev",
+    "siteUrlMatches": true,
+    "includesActiveOrigin": true,
+    "includesConfirmationRedirect": true,
+    "includesRecoveryRedirect": true
+  },
+  "probe": {
+    "confirmation": {
+      "requested": "https://0bf1f3c7-899a-4fa8-a323-4cda600b8c0d-00-29sn3di1iyfgy-m5n94n6u.sisko.replit.dev/auth?confirmed=1",
+      "generatedRedirect": "https://0bf1f3c7-899a-4fa8-a323-4cda600b8c0d-00-29sn3di1iyfgy-m5n94n6u.sisko.replit.dev/auth?confirmed=1",
+      "preserved": true,
+      "usesLocalhost": false
+    },
+    "recovery": {
+      "requested": "https://0bf1f3c7-899a-4fa8-a323-4cda600b8c0d-00-29sn3di1iyfgy-m5n94n6u.sisko.replit.dev/reset-password",
+      "generatedRedirect": "https://0bf1f3c7-899a-4fa8-a323-4cda600b8c0d-00-29sn3di1iyfgy-m5n94n6u.sisko.replit.dev/reset-password",
+      "preserved": true,
+      "usesLocalhost": false
+    }
+  }
+}

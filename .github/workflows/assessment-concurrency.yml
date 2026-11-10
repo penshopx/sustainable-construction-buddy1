@@ -1,0 +1,98 @@
+name: Assessment concurrency
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  assessment-concurrency:
+    name: Verify concurrent assessment submissions
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: .migration-backup
+    env:
+      TEST_DATABASE_URL: postgresql://postgres:postgres@127.0.0.1:54322/postgres
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Install PostgreSQL test tools
+        run: |
+          sudo apt-get update && sudo apt-get install --yes postgresql postgresql-client
+          dirname "$(find /usr/lib/postgresql -name initdb | sort -V | tail -1)" >> "$GITHUB_PATH"
+
+      - name: Protect direct lesson publication and concurrent quiz bank changes
+        run: bash scripts/test-lms-published-quiz-bank.sh
+
+      - name: Check quiz runner safety and prepare disposable Supabase project
+        run: |
+          python3 scripts/test-lms-quiz-ci.py
+          python3 scripts/test-lms-quiz-http-runner.py
+          python3 scripts/test-draft-conflicts-runner.py
+          python3 scripts/test-question-authority-runner.py
+          python3 scripts/test-bootstrap-super-admin-runner.py
+          python3 scripts/prepare-supabase-test-project.py "$RUNNER_TEMP/aspekindo-supabase"
+
+      - name: Start local Supabase and apply every repository migration
+        run: supabase --workdir "$RUNNER_TEMP/aspekindo-supabase" start
+
+      - name: Verify quiz authority and overlapping authenticated submissions with all migrations, RLS, grants and triggers
+        run: bash scripts/test-aspekindo-lms-quiz-authority.sh --supabase
+
+      - name: Configure local API for owner, stranger, admin and anonymous RPC checks
+        run: |
+          supabase --workdir "$RUNNER_TEMP/aspekindo-supabase" status -o json | jq -r '"TEST_SUPABASE_URL=\(.API_URL)\nTEST_SUPABASE_ANON_KEY=\(.ANON_KEY)\nTEST_SUPABASE_SERVICE_ROLE_KEY=\(.SERVICE_ROLE_KEY)"' >> "$GITHUB_ENV"
+
+      - name: Verify quiz grading and anti-forgery through real Auth and PostgREST
+        run: python3 scripts/test-lms-quiz-authority-http.py
+
+      - name: Verify draft conflicts through real Auth and PostgREST on the full schema
+        run: python3 scripts/test-assessment-draft-conflicts-http.py
+
+      - name: Verify assessment question authority through real Auth and PostgREST on the full schema
+        run: python3 scripts/test-assessment-question-authority-http.py
+
+      - name: Verify active admin cannot self-promote or delegate admin via INSERT, UPDATE or RPC
+        run: bash scripts/test-submit-assessment-concurrency.sh --admin-role-escalation
+
+      - name: Verify bootstrap super-admin cannot revoke itself or DELETE/PATCH its permanent role
+        run: python3 scripts/test-bootstrap-super-admin-http.py
+
+      - name: Verify revoked admin cannot restore roles with unchanged token and legitimate super-admin can grant
+        run: bash scripts/test-submit-assessment-concurrency.sh --admin-role-revocation
+
+      - name: Verify revoked admin token cannot read or PATCH member profiles but can still edit its own
+        run: bash scripts/test-submit-assessment-concurrency.sh --admin-profile-revocation
+
+      - name: Verify identical revoked admin token hides member certificates and still reads its own
+        run: bash scripts/test-submit-assessment-concurrency.sh --admin-certificate-revocation
+
+      - name: Verify admin cannot read, PATCH, DELETE, POST or upsert member drafts through real Auth and PostgREST
+        run: bash scripts/test-submit-assessment-concurrency.sh --admin-draft-privacy
+
+      - name: Verify expired stranger and admin denial preserves all member data and owner can finalize from draft
+        run: bash scripts/test-submit-assessment-concurrency.sh --expired-draft-privacy
+
+      - name: Verify two overlapping expired owner RPCs finalize once from the server draft
+        run: bash scripts/test-submit-assessment-concurrency.sh --expired-http-concurrency
+
+      - name: Verify overlapping admin denial and owner-only completion in both queue orders
+        run: bash scripts/test-submit-assessment-concurrency.sh --admin-http-concurrency
+
+      - name: Test concurrent submits, expired stranger denial with valid, missing and corrupt drafts, HTTP replay and admin revocation
+        run: bash scripts/test-submit-assessment-concurrency.sh
+
+      - name: Stop disposable local Supabase
+        if: always()
+        run: supabase --workdir "$RUNNER_TEMP/aspekindo-supabase" stop --no-backup

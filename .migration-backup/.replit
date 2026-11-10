@@ -1,0 +1,84 @@
+modules = ["nodejs-20", "web", "python-base-3.13"]
+[agent]
+expertMode = true
+integrations = ["javascript_database:1.0.0"]
+stack = "BEST_EFFORT_FALLBACK"
+
+[nix]
+channel = "stable-25_05"
+packages = ["freetype", "gumbo", "harfbuzz", "jbig2dec", "lcms2", "libimagequant", "libjpeg", "libjpeg_turbo", "libtiff", "libwebp", "libxcrypt", "mupdf", "openjpeg", "swig", "tcl", "tk", "xcbuild", "zlib", "glib", "nss", "atk", "cups", "pango", "gtk3", "libdrm", "mesa", "xorg.libXcomposite", "xorg.libXdamage", "xorg.libXfixes", "xorg.libXrandr", "xorg.libxcb", "libxkbcommon", "libgbm", "alsa-lib"]
+
+[deployment]
+deploymentTarget = "autoscale"
+run = ["node", "server.cjs"]
+build = ["npm", "run", "release"]
+publicDir = "dist"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
+waitForPort = 5000
+
+[[ports]]
+localPort = 3001
+externalPort = 3001
+
+[[ports]]
+localPort = 3002
+externalPort = 4200
+
+[[ports]]
+localPort = 3003
+externalPort = 3003
+
+[[ports]]
+localPort = 3100
+externalPort = 3002
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 5002
+externalPort = 5000
+
+[[ports]]
+localPort = 5100
+externalPort = 6000
+
+[[ports]]
+localPort = 5173
+externalPort = 5173
+
+[userenv]
+
+[userenv.shared]
+SUPABASE_URL = "https://yidlglstzvizsszrpobi.supabase.co"
+SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlpZGxnbHN0enZpenNzenJwb2JpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMzMDUxNDUsImV4cCI6MjA5ODg4MTE0NX0.hce28ZO-UvtEB022fwrzCYht-kEezreDe4QkD45wDTI"
+VITE_SUPABASE_URL = "https://yidlglstzvizsszrpobi.supabase.co"
+VITE_SUPABASE_PUBLISHABLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlpZGxnbHN0enZpenNzenJwb2JpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMzMDUxNDUsImV4cCI6MjA5ODg4MTE0NX0.hce28ZO-UvtEB022fwrzCYht-kEezreDe4QkD45wDTI"
+VITE_SUPABASE_PROJECT_ID = "yidlglstzvizsszrpobi"
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 180000

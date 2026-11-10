@@ -1,0 +1,50 @@
+[
+  {
+    "id": "d55cdb59-0ab1-49d2-8616-4fcd39f85701",
+    "position": 1,
+    "filepath": "src/pages/slides/Slide01.tsx",
+    "title": "Dari Informasi yang Tersebar Menuju Kesiapan yang Terarah",
+    "description": "Masalah utama dan arah PUB ASPEKINDO.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "6e40ac5f-44f6-4f0b-ac73-bb3f4a5ce102",
+    "position": 2,
+    "filepath": "src/pages/slides/Slide02.tsx",
+    "title": "Satu Payung untuk Ekosistem Layanan Anggota",
+    "description": "Posisi PUB dalam ekosistem ASPEKINDO.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "1cdebb85-acde-4680-9346-597445c34703",
+    "position": 3,
+    "filepath": "src/pages/slides/Slide03.tsx",
+    "title": "Satu Perjalanan Anggota dari Informasi ke Tindakan",
+    "description": "Alur anggota dari informasi hingga tindak lanjut.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "07ce4d35-6ad8-47b8-8c94-3d98d9e3a704",
+    "position": 4,
+    "filepath": "src/pages/slides/Slide04.tsx",
+    "title": "Peta Kompetensi 4 SIAP Membaca Posisi Secara Utuh",
+    "description": "Empat dimensi kesiapan dan prinsip pembacaan skor.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "50bd1275-2767-42ca-a8af-46bca2392305",
+    "position": 5,
+    "filepath": "src/pages/slides/Slide05.tsx",
+    "title": "Nilai bagi Anggota, Pengurus, dan Organisasi",
+    "description": "Nilai PUB bagi para pemangku kepentingan.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "447eecc5-2473-4f7c-bfed-2c614238d606",
+    "position": 6,
+    "filepath": "src/pages/slides/Slide06.tsx",
+    "title": "Usulan Pilot Terbatas Bersama Anggota",
+    "description": "Langkah pilot terukur dan perluasan bertahap.",
+    "speakerNotes": ""
+  }
+]

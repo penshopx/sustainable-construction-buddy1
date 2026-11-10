@@ -1,0 +1,1722 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: chat
+    description: Public helpdesk and capability-link chatbots
+paths:
+  /ruang-simpan/bedah-dokumen:
+    get:
+      operationId: listDocumentAnalyses
+      tags: [vault]
+      responses:
+        "200":
+          description: Saved private analyses of documents still owned by this member
+          content:
+            application/json:
+              schema: { type: array, items: { $ref: "#/components/schemas/DocumentAnalysis" } }
+    post:
+      operationId: analyzeVaultDocument
+      tags: [vault]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/DocumentAnalysisInput" }
+      responses:
+        "200":
+          description: Analysis persisted in the owner's workspace
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/DocumentAnalysis" }
+  /ruang-simpan/bedah-dokumen/{id}/chat:
+    post:
+      operationId: chatDocumentAnalysis
+      tags: [vault]
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string, format: uuid }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/DocumentAnalysisChatInput" }
+      responses:
+        "200":
+          description: Updated analysis with persisted document conversation
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/DocumentAnalysis" }
+        "422":
+          description: No matching reference excerpts; no AI request was sent
+        "502":
+          description: Invalid AI response or unavailable citation; no messages persisted
+  /ruang-simpan/bedah-dokumen/{id}:
+    delete:
+      operationId: deleteDocumentAnalysis
+      tags: [vault]
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        "204": { description: "Analysis and conversation removed, original document retained" }
+  /clinic/cases:
+    get:
+      operationId: listClinicCases
+      tags: [clinic]
+      responses:
+        "200":
+          description: Private requests owned by the authenticated PUB member
+          content:
+            application/json:
+              schema: { type: array, items: { $ref: "#/components/schemas/ClinicCase" } }
+    post:
+      operationId: createClinicCase
+      tags: [clinic]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/ClinicCaseInput" }
+      responses:
+        "201":
+          description: Request recorded, not a promise of immediate human availability
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ClinicCase" }
+  /clinic/cases/{id}/history:
+    get:
+      operationId: listClinicCaseHistory
+      tags: [clinic]
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        "200":
+          description: Complete reply and status history, only for the owner or a currently authorized admin
+          content:
+            application/json:
+              schema: { type: array, items: { $ref: "#/components/schemas/ClinicCaseHistoryEntry" } }
+        "404": { description: Request not found or inaccessible }
+  /clinic/operator/cases:
+    get:
+      operationId: listClinicOperatorCases
+      tags: [clinic]
+      responses:
+        "200":
+          description: Admin-only request queue
+          content:
+            application/json:
+              schema: { type: array, items: { $ref: "#/components/schemas/ClinicCase" } }
+  /clinic/operator/cases/{id}:
+    patch:
+      operationId: updateClinicCase
+      tags: [clinic]
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string, format: uuid }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/ClinicCaseUpdate" }
+      responses:
+        "200":
+          description: Admin reply visible only to the requesting member and admins
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ClinicCase" }
+        "409":
+          description: Revision changed; reload the latest version before explicitly retrying
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ClinicCaseConflict" }
+  /ruang-simpan/company-names:
+    post:
+      operationId: resolveVaultCompanies
+      tags: [vault]
+      summary: Canonical company names, limited to profiles visible under existing PUB RLS
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/VaultCompanyLookup" }
+      responses:
+        "200":
+          description: Visible canonical names only; no private documents, NIB or addresses
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [companies]
+                properties:
+                  companies:
+                    type: array
+                    items:
+                      type: object
+                      required: [userId, name]
+                      properties:
+                        userId: { type: string }
+                        name: { type: string }
+  /ruang-simpan/session:
+    post:
+      operationId: openVaultPubSession
+      tags: [vault]
+      summary: Establish HttpOnly Ruang Simpan cookie with a verified PUB bearer token
+      responses:
+        "200":
+          description: Verified PUB identity
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [userId]
+                properties:
+                  userId: { type: string }
+    delete:
+      operationId: closeVaultPubSession
+      tags: [vault]
+      responses:
+        "204":
+          description: Browser session cookie cleared
+  /ruang-simpan/external/profile:
+    get:
+      operationId: getVaultExternalProfile
+      tags: [vault-external]
+      security: [{ vaultToken: [] }]
+      summary: Read profile with profile:read permission
+      responses:
+        "200":
+          description: Official company profile
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VaultProfile" }
+    put:
+      operationId: updateVaultExternalProfile
+      tags: [vault-external]
+      security: [{ vaultToken: [] }]
+      summary: Update profile with profile:write and matching version
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/VaultProfile" }
+      responses:
+        "200":
+          description: Saved profile
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VaultProfile" }
+  /ruang-simpan/external/documents:
+    get:
+      operationId: listVaultExternalDocuments
+      tags: [vault-external]
+      security: [{ vaultToken: [] }]
+      summary: Only explicitly selected document metadata; requires documents:read
+      responses:
+        "200":
+          description: Selected metadata without private extracted text
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/VaultDocumentMetadata" }
+    post:
+      operationId: uploadVaultExternalDocument
+      tags: [vault-external]
+      security: [{ vaultToken: [] }]
+      summary: Upload only into selected folders; requires documents:upload
+      parameters:
+        - { name: name, in: query, required: true, schema: { type: string } }
+        - { name: folderId, in: query, required: true, schema: { type: string } }
+      requestBody:
+        required: true
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses:
+        "200":
+          description: Stored private file
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VaultDocument" }
+  /ruang-simpan/external/documents/{id}/download:
+    get:
+      operationId: downloadVaultExternalDocument
+      tags: [vault-external]
+      security: [{ vaultToken: [] }]
+      summary: Download selected document with documents:read permission
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string } }
+      responses:
+        "200":
+          description: Private attachment
+          content:
+            application/octet-stream:
+              schema: { type: string, format: binary }
+  /ruang-simpan/workspace:
+    get:
+      operationId: getVaultWorkspace
+      tags: [vault]
+      responses:
+        "200":
+          description: Private workspace for signed-in user
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VaultWorkspace" }
+  /ruang-simpan/workspace/summary:
+    get:
+      operationId: getVaultWorkspaceSummary
+      tags: [vault]
+      security: [{ memberBearer: [] }, { pubSession: [] }]
+      summary: Read only the signed-in owner's reference metadata, never document contents
+      responses:
+        "200":
+          description: Private reference summary; never cached
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VaultWorkspaceSummary" }
+        "401":
+          description: Missing or invalid member session
+        "403":
+          description: Member access denied
+  /ruang-simpan/folders:
+    post:
+      operationId: createVaultFolder
+      tags: [vault]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/VaultFolderInput" }
+      responses:
+        "200":
+          description: Created folder
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VaultFolder" }
+  /ruang-simpan/folders/{id}:
+    delete:
+      operationId: deleteVaultFolder
+      tags: [vault]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string } }
+      responses:
+        "204": { description: Deleted empty folder }
+  /ruang-simpan/profile:
+    put:
+      operationId: updateVaultProfile
+      tags: [vault]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/VaultProfile" }
+      responses:
+        "200":
+          description: Saved profile; stale version returns 409
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VaultProfile" }
+  /ruang-simpan/documents:
+    post:
+      operationId: uploadVaultDocument
+      tags: [vault]
+      parameters:
+        - { name: name, in: query, required: true, schema: { type: string } }
+        - { name: folderId, in: query, required: true, schema: { type: string } }
+      requestBody:
+        required: true
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses:
+        "200":
+          description: Uploaded private document
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VaultDocument" }
+  /ruang-simpan/documents/import:
+    post:
+      operationId: importVaultDocument
+      tags: [vault]
+      description: Import a direct public HTTPS file, at most 15 MiB. Login pages and private networks are rejected. Ownership is derived from the session.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/VaultLinkInput" }
+      responses:
+        "200":
+          description: Imported private document
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VaultDocument" }
+        "400":
+          description: Invalid URL, private network, login page or unsupported file
+        "401":
+          description: Session required
+        "413":
+          description: File or atomic workspace quota exceeds 15 MiB
+        "429":
+          description: Too many simultaneous imports
+        "502":
+          description: Source unavailable
+        "504":
+          description: Download timed out
+  /ruang-simpan/documents/{id}:
+    patch:
+      operationId: updateVaultDocument
+      tags: [vault]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/VaultDocumentUpdate" }
+      responses:
+        "200":
+          description: Updated document
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VaultDocument" }
+    delete:
+      operationId: deleteVaultDocument
+      tags: [vault]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string } }
+      responses:
+        "204": { description: Permanently removed }
+  /ruang-simpan/documents/{id}/ocr:
+    post:
+      operationId: processVaultOcr
+      tags: [vault]
+      summary: Owner-only OCR after explicit per-attempt external processing consent
+      description: Sends the private file to OpenRouter and Anthropic Claude Sonnet 4.5, without automatic retries or fallback. Maximum 15 MiB and 30 PDF pages; bounded worker and timeout. Poll workspace for completion.
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/VaultOcrInput" }
+      responses:
+        "202":
+          description: OCR accepted; text is not yet ready
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VaultDocument" }
+        "400": { description: Invalid consent or unsupported file }
+        "401": { description: Owner authentication required }
+        "404": { description: Document not found in this owner's workspace }
+        "409": { description: OCR already running or text already ready }
+        "429": { description: Workers busy or retry cooldown active }
+        "503": { description: OCR provider unavailable }
+  /ruang-simpan/documents/{id}/download:
+    get:
+      operationId: downloadVaultDocument
+      tags: [vault]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string } }
+      responses:
+        "200":
+          description: Private attachment
+          content:
+            application/octet-stream:
+              schema: { type: string, format: binary }
+  /ruang-simpan/questions:
+    post:
+      operationId: askVaultQuestion
+      tags: [vault]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/VaultQuestionInput" }
+      responses:
+        "200":
+          description: Grounded answer with cited sources
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VaultAnswer" }
+        "429":
+          $ref: "#/components/responses/ChatRateLimited"
+  /ruang-simpan/assistants:
+    post:
+      operationId: createVaultAssistant
+      tags: [vault]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/VaultAssistantInput" }
+      responses:
+        "200":
+          description: Saved assistant
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VaultAssistant" }
+  /ruang-simpan/assistants/{id}:
+    delete:
+      operationId: deleteVaultAssistant
+      tags: [vault]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string } }
+      responses:
+        "204": { description: Deleted assistant }
+  /ruang-simpan/connections:
+    post:
+      operationId: createVaultConnection
+      tags: [vault]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/VaultConnectionInput" }
+      responses:
+        "200":
+          description: Token shown only once
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/VaultConnectionCreated" }
+  /ruang-simpan/connections/{id}:
+    delete:
+      operationId: revokeVaultConnection
+      tags: [vault]
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string } }
+      responses:
+        "204": { description: Revoked access }
+  /operator/hermes/bg001-chat:
+    post:
+      operationId: runHermesBg001Chat
+      tags: [operator]
+      summary: Preview-only BG001 chat via real Hermes and server-configured Claude
+      security: [{ memberBearer: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/HermesBg001ChatInput" }
+      responses:
+        "200":
+          description: AI draft with checked citation identifiers, not an official decision
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/HermesBg001ChatResult" }
+        "400":
+          $ref: "#/components/responses/OperatorPilotError"
+        "401":
+          $ref: "#/components/responses/OperatorPilotError"
+        "402":
+          $ref: "#/components/responses/OperatorPilotError"
+        "403":
+          $ref: "#/components/responses/OperatorPilotError"
+        "404":
+          $ref: "#/components/responses/OperatorPilotError"
+        "429":
+          $ref: "#/components/responses/OperatorPilotError"
+        "503":
+          $ref: "#/components/responses/OperatorPilotError"
+        "504":
+          $ref: "#/components/responses/OperatorPilotError"
+  /operator/hermes/bg001-check:
+    post:
+      operationId: runHermesBg001Check
+      tags: [operator]
+      summary: Preview-only real Hermes with uploaded BG001 references and a local response fixture
+      security: [{ memberBearer: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/HermesLocalCheckInput"
+      responses:
+        "200":
+          description: BG001 context verified in the real worker; not an AI-generated answer
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HermesSchemeLocalCheckResult"
+        "400":
+          $ref: "#/components/responses/OperatorPilotError"
+        "401":
+          $ref: "#/components/responses/OperatorPilotError"
+        "403":
+          $ref: "#/components/responses/OperatorPilotError"
+        "404":
+          $ref: "#/components/responses/OperatorPilotError"
+        "429":
+          $ref: "#/components/responses/OperatorPilotError"
+        "503":
+          $ref: "#/components/responses/OperatorPilotError"
+        "504":
+          $ref: "#/components/responses/OperatorPilotError"
+  /operator/hermes/local-check:
+    post:
+      operationId: runHermesLocalCheck
+      tags: [operator]
+      summary: Preview-only real Hermes worker with synthetic data and a local mock provider
+      security: [{ memberBearer: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/HermesLocalCheckInput"
+      responses:
+        "200":
+          description: One real Hermes iteration completed without an external model request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HermesLocalCheckResult"
+        "400":
+          $ref: "#/components/responses/OperatorPilotError"
+        "401":
+          $ref: "#/components/responses/OperatorPilotError"
+        "403":
+          $ref: "#/components/responses/OperatorPilotError"
+        "404":
+          $ref: "#/components/responses/OperatorPilotError"
+        "429":
+          $ref: "#/components/responses/OperatorPilotError"
+        "503":
+          $ref: "#/components/responses/OperatorPilotError"
+        "504":
+          $ref: "#/components/responses/OperatorPilotError"
+  /operator/pilot/jobs:
+    post:
+      operationId: createOperatorPilotJob
+      tags: [operator]
+      summary: Super-admin-only preview simulation; no AI or member data
+      security: [{ memberBearer: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OperatorPilotInput"
+      responses:
+        "200":
+          description: New or deduplicated simulation job
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OperatorPilotSubmission"
+        "400":
+          $ref: "#/components/responses/OperatorPilotError"
+        "401":
+          $ref: "#/components/responses/OperatorPilotError"
+        "403":
+          $ref: "#/components/responses/OperatorPilotError"
+        "404":
+          $ref: "#/components/responses/OperatorPilotError"
+        "409":
+          $ref: "#/components/responses/OperatorPilotError"
+        "429":
+          $ref: "#/components/responses/OperatorPilotError"
+        "503":
+          $ref: "#/components/responses/OperatorPilotError"
+  /operator/pilot/jobs/{jobId}:
+    get:
+      operationId: getOperatorPilotJob
+      tags: [operator]
+      summary: Reverify super-admin access and return only the caller's simulation
+      security: [{ memberBearer: [] }]
+      parameters:
+        - $ref: "#/components/parameters/OperatorJobId"
+      responses:
+        "200":
+          description: Current synthetic job
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OperatorPilotJob"
+        "400":
+          $ref: "#/components/responses/OperatorPilotError"
+        "401":
+          $ref: "#/components/responses/OperatorPilotError"
+        "403":
+          $ref: "#/components/responses/OperatorPilotError"
+        "404":
+          $ref: "#/components/responses/OperatorPilotError"
+        "429":
+          $ref: "#/components/responses/OperatorPilotError"
+        "503":
+          $ref: "#/components/responses/OperatorPilotError"
+  /operator/pilot/jobs/{jobId}/cancel:
+    post:
+      operationId: cancelOperatorPilotJob
+      tags: [operator]
+      summary: Reverify super-admin access before cancelling an owned simulation
+      security: [{ memberBearer: [] }]
+      parameters:
+        - $ref: "#/components/parameters/OperatorJobId"
+      responses:
+        "200":
+          description: Cancelled or already terminal synthetic job
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OperatorPilotJob"
+        "400":
+          $ref: "#/components/responses/OperatorPilotError"
+        "401":
+          $ref: "#/components/responses/OperatorPilotError"
+        "403":
+          $ref: "#/components/responses/OperatorPilotError"
+        "404":
+          $ref: "#/components/responses/OperatorPilotError"
+        "429":
+          $ref: "#/components/responses/OperatorPilotError"
+        "503":
+          $ref: "#/components/responses/OperatorPilotError"
+  /smap/pilot/documents:
+    get:
+      operationId: listSmapPilotDocuments
+      tags: [chat]
+      summary: Preview-only owner-scoped SMAP completeness indicators
+      security: [{ memberBearer: [] }]
+      responses:
+        "200":
+          description: Up to 50 owner records; no field values or file URLs
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SmapPilotDocuments"
+        "401":
+          $ref: "#/components/responses/ChatBadRequest"
+        "404":
+          $ref: "#/components/responses/ChatNotFound"
+        "429":
+          $ref: "#/components/responses/ChatRateLimited"
+        "503":
+          $ref: "#/components/responses/ChatUnavailable"
+  /smap/pilot/analyze:
+    post:
+      operationId: analyzeSmapPilot
+      tags: [chat]
+      summary: Preview-only read-only Hermes analysis through Claude
+      security: [{ memberBearer: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SmapPilotInput"
+      responses:
+        "200":
+          description: Ephemeral draft based only on completeness indicators
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SmapPilotResult"
+        "400":
+          $ref: "#/components/responses/ChatBadRequest"
+        "401":
+          $ref: "#/components/responses/ChatBadRequest"
+        "404":
+          $ref: "#/components/responses/ChatNotFound"
+        "429":
+          $ref: "#/components/responses/ChatRateLimited"
+        "503":
+          $ref: "#/components/responses/ChatUnavailable"
+        "504":
+          $ref: "#/components/responses/ChatTimeout"
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /scheme-references:
+    get:
+      operationId: getSchemeReferences
+      tags: [chat]
+      summary: Read-only draft reference answers for authenticated members
+      security: [{ memberBearer: [] }]
+      responses:
+        "200":
+          description: Draft reference bank, not AI output
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SchemeReferenceBank"
+        "401":
+          description: Member authentication required
+        "503":
+          description: Reference bank temporarily unavailable
+  /helpdesk/status:
+    get:
+      operationId: getHelpdeskAiStatus
+      tags: [chat]
+      summary: Cached AI configuration and provider limit indication, not a funding guarantee
+      parameters:
+        - $ref: "#/components/parameters/AiDiagnostics"
+      responses:
+        "200":
+          description: Advisory only; never authorizes private context or changes models
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AiReadiness"
+        "401":
+          description: Supplied member session is invalid, or diagnostics require a verified member session
+        "403":
+          description: Diagnostics require a current admin role
+        "503":
+          description: Role verification unavailable
+  /ruang-simpan/ai-status:
+    get:
+      operationId: getVaultAiStatus
+      tags: [vault]
+      summary: Cached AI readiness; requires the existing PUB session
+      parameters:
+        - $ref: "#/components/parameters/AiDiagnostics"
+      responses:
+        "200":
+          description: Advisory only, no document access or consent implied
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AiReadiness"
+        "401":
+          description: PUB session required
+        "403":
+          description: Diagnostics require a current admin role
+        "503":
+          description: Role verification unavailable
+  /helpdesk:
+    post:
+      operationId: sendHelpdeskMessage
+      tags: [chat]
+      summary: Ask the public PUB application helpdesk
+      description: Requests without model settings use the public daily helpdesk. Explicit engine or expert settings require a valid Supabase member bearer token. No automatic model fallback.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/HelpdeskInput"
+      responses:
+        "200":
+          description: AI reply
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChatReply"
+        "400":
+          $ref: "#/components/responses/ChatBadRequest"
+        "401":
+          description: Login required or session invalid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChatError"
+        "429":
+          $ref: "#/components/responses/ChatRateLimited"
+        "503":
+          $ref: "#/components/responses/ChatUnavailable"
+        "504":
+          $ref: "#/components/responses/ChatTimeout"
+  /public-chatbots/{token}:
+    get:
+      operationId: getPublicChatbot
+      tags: [chat]
+      summary: Read safe chatbot metadata using its sharing capability
+      description: A share token grants access to this chatbot only, not owner data or linked private knowledge. is_public controls marketplace listing, not link sharing.
+      parameters:
+        - $ref: "#/components/parameters/ChatbotToken"
+      responses:
+        "200":
+          description: Public presentation fields only
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PublicChatbot"
+        "404":
+          $ref: "#/components/responses/ChatNotFound"
+        "429":
+          $ref: "#/components/responses/ChatRateLimited"
+        "503":
+          $ref: "#/components/responses/ChatUnavailable"
+        "504":
+          $ref: "#/components/responses/ChatTimeout"
+    parameters: []
+  /public-chatbots/{token}/chat:
+    post:
+      operationId: sendPublicChatbotMessage
+      tags: [chat]
+      summary: Send a message to a chatbot shared by capability link
+      parameters:
+        - $ref: "#/components/parameters/ChatbotToken"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ChatInput"
+      responses:
+        "200":
+          description: AI reply
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChatReply"
+        "400":
+          $ref: "#/components/responses/ChatBadRequest"
+        "404":
+          $ref: "#/components/responses/ChatNotFound"
+        "429":
+          $ref: "#/components/responses/ChatRateLimited"
+        "503":
+          $ref: "#/components/responses/ChatUnavailable"
+        "504":
+          $ref: "#/components/responses/ChatTimeout"
+components:
+  parameters:
+    AiDiagnostics:
+      name: diagnostics
+      in: query
+      description: Sanitized diagnostic codes only, restricted to a freshly verified admin role.
+      schema: { type: boolean, default: false }
+    OperatorJobId:
+      name: jobId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    ChatbotToken:
+      name: token
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: "^[A-Za-z0-9_-]{8,80}$"
+  securitySchemes:
+    pubSession:
+      type: apiKey
+      in: cookie
+      name: rs_pub_session
+    vaultToken:
+      type: http
+      scheme: bearer
+      description: Server-only scoped app token, valid 90 days unless revoked
+    memberBearer:
+      type: http
+      scheme: bearer
+  responses:
+    OperatorPilotError:
+      description: Preview disabled, invalid request, access denied or verification unavailable
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ChatError"
+    ChatBadRequest:
+      description: Invalid chat messages
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ChatError"
+    ChatNotFound:
+      description: Invalid, missing, deleted, or revoked share link
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ChatError"
+    ChatRateLimited:
+      description: Request or concurrency limit exceeded; retry after the Retry-After interval
+      headers:
+        Retry-After:
+          schema:
+            type: integer
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ChatError"
+    ChatUnavailable:
+      description: Chat configuration or upstream service unavailable
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ChatError"
+    ChatTimeout:
+      description: Upstream request timed out
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ChatError"
+  schemas:
+    DocumentAnalysisInput:
+      type: object
+      required: [documentId, consent]
+      properties:
+        documentId: { type: string, format: uuid }
+        consent: { type: boolean, enum: [true] }
+        partIndex:
+          type: integer
+          minimum: 0
+          maximum: 19
+          description: Explicit section to process; retrying a completed section reuses its result without billing.
+    DocumentAnalysisEvidence:
+      type: object
+      required: [part, start, end]
+      properties:
+        part: { type: integer, minimum: 1 }
+        start: { type: integer, minimum: 0 }
+        end: { type: integer, minimum: 0 }
+        page: { type: integer, minimum: 1 }
+    DocumentAnalysisChatInput:
+      type: object
+      required: [question, consent]
+      properties:
+        question: { type: string, minLength: 1, maxLength: 2000 }
+        consent: { type: boolean, enum: [true] }
+        compareRegulations: { type: boolean, default: false }
+    DocumentAnalysisChecklist:
+      type: object
+      required: [item, status, evidence]
+      properties:
+        item: { type: string, minLength: 1, maxLength: 400 }
+        status: { type: string, enum: [ada, perlu_dicek, tidak_ditemukan] }
+        evidence: { type: string, maxLength: 1200 }
+        source: { $ref: "#/components/schemas/DocumentAnalysisEvidence" }
+    DocumentAnalysisRisk:
+      type: object
+      required: [title, severity, evidence, recommendation]
+      properties:
+        title: { type: string, minLength: 1, maxLength: 400 }
+        severity: { type: string, enum: [tinggi, sedang, rendah] }
+        evidence: { type: string, maxLength: 1200 }
+        recommendation: { type: string, maxLength: 1200 }
+        source: { $ref: "#/components/schemas/DocumentAnalysisEvidence" }
+    DocumentAnalysisRegulation:
+      type: object
+      required: [title, evidence, note]
+      properties:
+        title: { type: string, minLength: 1, maxLength: 400 }
+        evidence: { type: string, maxLength: 1200 }
+        note: { type: string, maxLength: 1200 }
+        source: { $ref: "#/components/schemas/DocumentAnalysisEvidence" }
+    DocumentAnalysisResult:
+      type: object
+      required: [category, summary, checklist, risks, regulations]
+      properties:
+        category: { type: string, enum: [Dokumen Tender, SKK/SBU, Kontrak, Gambar Teknis, Dokumen Proyek] }
+        summary: { type: string, minLength: 1, maxLength: 16000 }
+        checklist:
+          type: array
+          maxItems: 80
+          items: { $ref: "#/components/schemas/DocumentAnalysisChecklist" }
+        risks:
+          type: array
+          maxItems: 40
+          items: { $ref: "#/components/schemas/DocumentAnalysisRisk" }
+        regulations:
+          type: array
+          maxItems: 40
+          items: { $ref: "#/components/schemas/DocumentAnalysisRegulation" }
+    DocumentAnalysisMessage:
+      type: object
+      required: [id, role, content, createdAt]
+      properties:
+        id: { type: string, format: uuid }
+        role: { type: string, enum: [user, assistant] }
+        content: { type: string, maxLength: 32000 }
+        createdAt: { type: string, format: date-time }
+        compareRegulations: { type: boolean }
+        sources:
+          type: array
+          items: { $ref: "#/components/schemas/VaultSource" }
+    DocumentAnalysis:
+      type: object
+      required: [id, documentId, documentName, createdAt, model, sourceCharacters, analyzedCharacters, truncated, result, messages]
+      properties:
+        id: { type: string, format: uuid }
+        documentId: { type: string, format: uuid }
+        documentName: { type: string }
+        createdAt: { type: string, format: date-time }
+        model: { type: string }
+        sourceCharacters: { type: integer }
+        analyzedCharacters: { type: integer }
+        truncated: { type: boolean }
+        coverageNote: { type: string }
+        parts:
+          type: array
+          maxItems: 20
+          items: { $ref: "#/components/schemas/DocumentAnalysisPart" }
+        sourceCurrent:
+          type: boolean
+          description: Whether this historical analysis matches the current readable source in the owner's Ruang Simpan.
+        result: { $ref: "#/components/schemas/DocumentAnalysisResult" }
+        messages:
+          type: array
+          items: { $ref: "#/components/schemas/DocumentAnalysisMessage" }
+    DocumentAnalysisPart:
+      type: object
+      required: [index, start, end, status, attempts]
+      properties:
+        index: { type: integer, minimum: 0 }
+        start: { type: integer, minimum: 0 }
+        end: { type: integer, minimum: 0 }
+        status: { type: string, enum: [pending, processing, completed, failed] }
+        attempts: { type: integer, minimum: 0, maximum: 3 }
+        error: { type: string }
+        result: { $ref: "#/components/schemas/DocumentAnalysisResult" }
+    ClinicTopic:
+      type: string
+      enum: [sbu, lsbu-abu, pub-lkut, perizinan, tender, kontraktor, konsultan, suplai, pelaksanaan-proyek, brain-project, personel-manajerial, smap, pancek, uji-kompetensi, skk, skk-k3, bimtek, pkb, askom, lisensi-bnsp, akreditasi-kan, ajj-nirkertas]
+    ClinicCaseInput:
+      type: object
+      required: [topicId, kind, subject, description]
+      properties:
+        topicId: { $ref: "#/components/schemas/ClinicTopic" }
+        kind: { type: string, enum: [consultation, feedback] }
+        subject: { type: string, minLength: 3, maxLength: 180 }
+        description: { type: string, minLength: 10, maxLength: 4000 }
+        rating: { type: integer, minimum: 1, maximum: 5 }
+    ClinicCaseUpdate:
+      type: object
+      required: [status, operatorReply, expectedRevision]
+      properties:
+        expectedRevision: { type: integer, minimum: 0, maximum: 2147483646 }
+        status: { type: string, enum: [open, in_review, answered, closed] }
+        operatorReply: { type: string, maxLength: 6000 }
+    ClinicCaseConflict:
+      type: object
+      required: [error]
+      properties:
+        error: { type: string }
+    ClinicCaseHistoryEntry:
+      type: object
+      required: [id, caseId, revision, status, operatorReply, actorId, createdAt]
+      properties:
+        id: { type: string, format: uuid }
+        caseId: { type: string, format: uuid }
+        revision: { type: integer, minimum: 0 }
+        status: { type: string, enum: [open, in_review, answered, closed] }
+        operatorReply: { type: string }
+        actorId: { type: [string, "null"], description: Verified JWT subject; null for legacy snapshots with unknown authors }
+        createdAt: { type: string, format: date-time }
+    ClinicCase:
+      type: object
+      required: [id, ownerId, topicId, kind, subject, description, rating, status, operatorReply, revision, createdAt, updatedAt]
+      properties:
+        revision: { type: integer, minimum: 0 }
+        id: { type: string, format: uuid }
+        ownerId: { type: string }
+        topicId: { $ref: "#/components/schemas/ClinicTopic" }
+        kind: { type: string, enum: [consultation, feedback] }
+        subject: { type: string }
+        description: { type: string }
+        rating: { type: [integer, "null"] }
+        status: { type: string, enum: [open, in_review, answered, closed] }
+        operatorReply: { type: string }
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+    VaultCompanyLookup:
+      type: object
+      required: [userIds]
+      properties:
+        userIds:
+          type: array
+          minItems: 1
+          maxItems: 100
+          items: { type: string, format: uuid }
+    VaultDocumentMetadata:
+      type: object
+      required: [id, name, folderId, size, type, createdAt, status, starred]
+      properties:
+        id: { type: string }
+        name: { type: string }
+        folderId: { type: string }
+        size: { type: integer }
+        type: { type: string }
+        createdAt: { type: string }
+        status: { type: string, enum: [ready, stored, failed, processing] }
+        starred: { type: boolean }
+    VaultFolderInput:
+      type: object
+      required: [name]
+      properties:
+        name: { type: string, minLength: 1, maxLength: 80 }
+    VaultFolder:
+      type: object
+      required: [id, name, count]
+      properties:
+        id: { type: string }
+        name: { type: string }
+        count: { type: integer }
+    VaultProfile:
+      type: object
+      required: [name, nib, address, version]
+      properties:
+        name: { type: string, maxLength: 200 }
+        nib: { type: string, maxLength: 40 }
+        address: { type: string, maxLength: 1000 }
+        version: { type: integer, minimum: 0 }
+    VaultLinkInput:
+      type: object
+      required: [url, name, folderId]
+      properties:
+        url: { type: string, minLength: 1, maxLength: 8192 }
+        name: { type: string, minLength: 1, maxLength: 200 }
+        folderId: { type: string, minLength: 1, maxLength: 200 }
+    VaultDocument:
+      type: object
+      required: [id, name, folderId, size, type, createdAt, status, starred, text]
+      properties:
+        id: { type: string }
+        name: { type: string }
+        folderId: { type: string }
+        size: { type: integer }
+        type: { type: string }
+        createdAt: { type: string }
+        status: { type: string, enum: [ready, stored, failed, processing] }
+        starred: { type: boolean }
+        text: { type: string }
+        extraction:
+          $ref: "#/components/schemas/VaultExtraction"
+        ocrError: { type: string }
+        ocrAttemptedAt: { type: string }
+        ocrPages:
+          type: array
+          items: { $ref: "#/components/schemas/VaultOcrPage" }
+    VaultExtraction:
+      type: object
+      required: [complete, note]
+      properties:
+        complete: { type: boolean }
+        note: { type: string }
+        pages:
+          type: array
+          items: { $ref: "#/components/schemas/VaultOcrPage" }
+    VaultOcrPage:
+      type: object
+      required: [page, start, end]
+      properties:
+        page: { type: integer, minimum: 1 }
+        start: { type: integer, minimum: 0 }
+        end: { type: integer, minimum: 0 }
+    VaultOcrRange:
+      type: object
+      required: [start, end]
+      properties:
+        start: { type: integer, minimum: 1, maximum: 100000 }
+        end: { type: integer, minimum: 1, maximum: 100000 }
+    VaultOcrInput:
+      type: object
+      required: [consent, provider]
+      properties:
+        consent: { type: boolean, enum: [true] }
+        provider: { type: string, enum: [openrouter-anthropic-v1] }
+        pageRange: { $ref: "#/components/schemas/VaultOcrRange" }
+    VaultDocumentUpdate:
+      type: object
+      properties:
+        name: { type: string, minLength: 1, maxLength: 200 }
+        folderId: { type: string }
+        starred: { type: boolean }
+    VaultAssistantInput:
+      type: object
+      required: [name, instructions, documentIds]
+      properties:
+        name: { type: string, minLength: 1, maxLength: 100 }
+        instructions: { type: string, maxLength: 2000 }
+        documentIds: { type: array, items: { type: string } }
+    VaultAssistant:
+      allOf:
+        - { $ref: "#/components/schemas/VaultAssistantInput" }
+        - type: object
+          required: [id]
+          properties:
+            id: { type: string }
+    VaultQuestionInput:
+      type: object
+      required: [question, consent]
+      properties:
+        question: { type: string, minLength: 3, maxLength: 2000 }
+        consent: { type: boolean, enum: [true] }
+        assistantId: { type: string }
+        documentIds: { type: array, maxItems: 10, items: { type: string } }
+    VaultSource:
+      type: object
+      required: [id, name, quote]
+      properties:
+        id: { type: string }
+        name: { type: string }
+        quote: { type: string }
+    VaultAnswer:
+      type: object
+      required: [answer, sources]
+      properties:
+        answer: { type: string }
+        sources: { type: array, items: { $ref: "#/components/schemas/VaultSource" } }
+    VaultConnectionInput:
+      type: object
+      required: [name, scopes, documentIds, folderIds]
+      properties:
+        name: { type: string, minLength: 1, maxLength: 100 }
+        scopes:
+          type: array
+          minItems: 1
+          items: { type: string, enum: [profile:read, profile:write, documents:read, documents:upload] }
+        documentIds: { type: array, items: { type: string } }
+        folderIds: { type: array, items: { type: string } }
+    VaultConnection:
+      allOf:
+        - { $ref: "#/components/schemas/VaultConnectionInput" }
+        - type: object
+          required: [id, createdAt, expiresAt, revoked]
+          properties:
+            id: { type: string }
+            createdAt: { type: string }
+            expiresAt: { type: string }
+            revoked: { type: boolean }
+    VaultConnectionCreated:
+      type: object
+      required: [connection, token]
+      properties:
+        connection: { $ref: "#/components/schemas/VaultConnection" }
+        token: { type: string }
+    VaultActivity:
+      type: object
+      required: [id, action, createdAt]
+      properties:
+        id: { type: string }
+        action: { type: string }
+        createdAt: { type: string }
+    VaultWorkspaceSummary:
+      type: object
+      additionalProperties: false
+      required: [profile, documentCount, readyDocumentCount, checkedAt]
+      properties:
+        profile:
+          type: object
+          additionalProperties: false
+          required: [name, version]
+          properties:
+            name: { type: string }
+            version: { type: integer, minimum: 0 }
+        documentCount: { type: integer, minimum: 0 }
+        readyDocumentCount: { type: integer, minimum: 0 }
+        checkedAt: { type: string, format: date-time }
+    VaultWorkspace:
+      type: object
+      required: [folders, documents, profile, assistants, connections, activities, usedBytes, limitBytes]
+      properties:
+        folders: { type: array, items: { $ref: "#/components/schemas/VaultFolder" } }
+        documents: { type: array, items: { $ref: "#/components/schemas/VaultDocument" } }
+        profile: { $ref: "#/components/schemas/VaultProfile" }
+        assistants: { type: array, items: { $ref: "#/components/schemas/VaultAssistant" } }
+        connections: { type: array, items: { $ref: "#/components/schemas/VaultConnection" } }
+        activities: { type: array, items: { $ref: "#/components/schemas/VaultActivity" } }
+        usedBytes: { type: integer }
+        limitBytes: { type: integer }
+    OperatorPilotInput:
+      type: object
+      additionalProperties: false
+      required: [requestId, operation]
+      properties:
+        requestId: { type: string, format: uuid }
+        operation: { type: string, enum: [service_health] }
+        scenario: { type: string, enum: [success, failure, hang] }
+    OperatorPilotSimulation:
+      type: object
+      required: [mode, openclaw, hermes]
+      properties:
+        mode: { type: string, enum: [synthetic-only] }
+        openclaw: { type: string, enum: [simulated] }
+        hermes: { type: string, enum: [simulated] }
+    OperatorPilotJob:
+      type: object
+      required: [id, requestId, operation, state, mode, createdAt]
+      properties:
+        id: { type: string, format: uuid }
+        requestId: { type: string, format: uuid }
+        operation: { type: string, enum: [service_health] }
+        state: { type: string, enum: [queued, running, completed, failed, cancelled, timed_out] }
+        mode: { type: string, enum: [synthetic-only] }
+        createdAt: { type: integer, minimum: 0 }
+        startedAt: { type: integer, minimum: 0 }
+        finishedAt: { type: integer, minimum: 0 }
+        code: { type: string, enum: [synthetic_failure, deadline_exceeded, cancelled] }
+        result:
+          $ref: "#/components/schemas/OperatorPilotSimulation"
+    OperatorPilotSubmission:
+      type: object
+      required: [job, reused]
+      properties:
+        job:
+          $ref: "#/components/schemas/OperatorPilotJob"
+        reused: { type: boolean }
+    SmapPilotCheck:
+      type: object
+      required: [name, complete]
+      properties:
+        name: { type: string }
+        complete: { type: boolean }
+    SmapPilotDocument:
+      type: object
+      required: [id, type, checks]
+      properties:
+        id: { type: string, format: uuid }
+        createdAt: { type: string, format: date-time }
+        type:
+          type: string
+          enum: [surat_pernyataan, sertifikat_iso, pendidikan_antikorupsi]
+        checks:
+          type: array
+          items:
+            $ref: "#/components/schemas/SmapPilotCheck"
+    SmapPilotDocuments:
+      type: object
+      required: [documents]
+      properties:
+        documents:
+          type: array
+          maxItems: 50
+          items:
+            $ref: "#/components/schemas/SmapPilotDocument"
+    SmapPilotInput:
+      type: object
+      additionalProperties: false
+      required: [documentIds, consent]
+      properties:
+        documentIds:
+          type: array
+          minItems: 1
+          maxItems: 5
+          uniqueItems: true
+          items: { type: string, format: uuid }
+        consent:
+          type: string
+          enum: [smap-presence-v1]
+    SmapPilotResult:
+      type: object
+      required: [analysis, model, documentCount, runtime, dataScope]
+      properties:
+        analysis: { type: string, minLength: 1, maxLength: 12000 }
+        model: { type: string }
+        documentCount: { type: integer, minimum: 1, maximum: 5 }
+        runtime: { type: string, enum: [hermes] }
+        dataScope: { type: string, enum: [presence-only] }
+    ChatMessage:
+      type: object
+      required: [role, content]
+      properties:
+        role:
+          type: string
+          enum: [user, assistant]
+        content:
+          type: string
+          minLength: 1
+          maxLength: 4000
+    ChatInput:
+      type: object
+      required: [messages]
+      properties:
+        messages:
+          type: array
+          minItems: 1
+          maxItems: 10
+          items:
+            $ref: "#/components/schemas/ChatMessage"
+    HermesBg001ChatInput:
+      type: object
+      additionalProperties: false
+      required: [consent, question]
+      properties:
+        consent: { type: boolean, enum: [true] }
+        question: { type: string, minLength: 5, maxLength: 1000 }
+    HermesBg001ChatResult:
+      type: object
+      required: [status, runtime, provider, schemeCode, dataScope, toolCount, externalModelRequests, contextVerified, model, answer, insufficientEvidence, elapsedMs, sources]
+      properties:
+        status: { type: string, enum: [completed] }
+        runtime: { type: string, enum: [hermes] }
+        provider: { type: string, enum: [openrouter-claude] }
+        schemeCode: { type: string, enum: [BG001] }
+        dataScope: { type: string, enum: [question-and-public-references] }
+        toolCount: { type: integer, enum: [0] }
+        externalModelRequests: { type: integer, enum: [1] }
+        contextVerified: { type: boolean, enum: [true] }
+        model: { type: string }
+        answer: { type: string, minLength: 1, maxLength: 10000 }
+        insufficientEvidence: { type: boolean }
+        elapsedMs: { type: integer, minimum: 0 }
+        sources:
+          type: array
+          maxItems: 3
+          items: { $ref: "#/components/schemas/HermesSchemeEvidence" }
+    HermesSchemeEvidence:
+      type: object
+      required: [id, title, page, quote]
+      properties:
+        id: { type: string }
+        title: { type: string }
+        page: { type: integer, minimum: 1 }
+        quote: { type: string }
+    HermesSchemeLocalCheckResult:
+      type: object
+      required: [status, runtime, provider, dataScope, toolCount, localProviderRequests, externalModelRequests, documentCount, elapsedMs, fixtureReply, schemeCode, contextVerified, citationsVerified, question, sources]
+      properties:
+        status: { type: string, enum: [completed] }
+        runtime: { type: string, enum: [hermes] }
+        provider: { type: string, enum: [local-mock] }
+        dataScope: { type: string, enum: [uploaded-reference-only] }
+        toolCount: { type: integer, enum: [0] }
+        localProviderRequests: { type: integer, enum: [1] }
+        externalModelRequests: { type: integer, enum: [0] }
+        documentCount: { type: integer, enum: [3] }
+        elapsedMs: { type: integer, minimum: 0 }
+        fixtureReply: { type: string }
+        schemeCode: { type: string, enum: [BG001] }
+        contextVerified: { type: boolean, enum: [true] }
+        citationsVerified: { type: boolean, enum: [true] }
+        question: { type: string }
+        sources:
+          type: array
+          minItems: 3
+          maxItems: 3
+          items: { $ref: "#/components/schemas/HermesSchemeEvidence" }
+    HermesLocalCheckInput:
+      type: object
+      additionalProperties: false
+      required: [consent]
+      properties:
+        consent: { type: boolean, enum: [true] }
+    HermesLocalCheckResult:
+      type: object
+      required: [status, runtime, provider, dataScope, toolCount, localProviderRequests, externalModelRequests, documentCount, elapsedMs, fixtureReply]
+      properties:
+        status: { type: string, enum: [completed] }
+        runtime: { type: string, enum: [hermes] }
+        provider: { type: string, enum: [local-mock] }
+        dataScope: { type: string, enum: [synthetic-only] }
+        toolCount: { type: integer, enum: [0] }
+        localProviderRequests: { type: integer, enum: [1] }
+        externalModelRequests: { type: integer, enum: [0] }
+        documentCount: { type: integer, enum: [1] }
+        elapsedMs: { type: integer, minimum: 0 }
+        fixtureReply: { type: string }
+    SchemeReferenceProfile:
+      type: object
+      required: [code, family, title]
+      properties:
+        code: { type: string }
+        family: { type: string }
+        title: { type: string }
+    SchemeReferenceEvidence:
+      type: object
+      required: [kind, id, title, quote]
+      properties:
+        kind: { type: string, enum: [pdf, text, application_policy] }
+        id: { type: string }
+        title: { type: string }
+        quote: { type: string }
+        page: { type: integer, minimum: 1 }
+        lineStart: { type: integer, minimum: 1 }
+        lineEnd: { type: integer, minimum: 1 }
+    SchemeReferenceCase:
+      type: object
+      required: [id, kind, code, family, category, appliesTo, question, answer, clarificationQuestions, requiredPoints, forbiddenClaims, evidenceIds]
+      properties:
+        id: { type: string }
+        kind: { type: string, enum: [reference, boundary, application_policy] }
+        code: { type: string }
+        family: { type: string }
+        category: { type: string }
+        appliesTo:
+          type: array
+          items: { type: string }
+        question: { type: string }
+        answer: { type: string }
+        clarificationQuestions:
+          type: array
+          items: { type: string }
+        requiredPoints:
+          type: array
+          items: { type: string }
+        forbiddenClaims:
+          type: array
+          items: { type: string }
+        evidenceIds:
+          type: array
+          items: { type: string }
+    SchemeReferenceCounts:
+      type: object
+      required: [profiles, cases, evidence]
+      properties:
+        profiles: { type: integer }
+        cases: { type: integer }
+        evidence: { type: integer }
+    SchemeReferenceBank:
+      type: object
+      required: [status, usedForAiReplies, scope, reviewGuidance, profiles, counts, cases, evidence]
+      properties:
+        status: { type: string, enum: [draft_reference_answers] }
+        usedForAiReplies: { type: boolean, enum: [false] }
+        scope: { type: string }
+        reviewGuidance: { type: string }
+        profiles:
+          type: array
+          items: { $ref: "#/components/schemas/SchemeReferenceProfile" }
+        counts:
+          $ref: "#/components/schemas/SchemeReferenceCounts"
+        cases:
+          type: array
+          items: { $ref: "#/components/schemas/SchemeReferenceCase" }
+        evidence:
+          type: object
+          additionalProperties: { $ref: "#/components/schemas/SchemeReferenceEvidence" }
+    ChatReply:
+      type: object
+      required: [reply]
+      properties:
+        vault_sources:
+          type: array
+          items: { $ref: "#/components/schemas/VaultSource" }
+        reply:
+          type: string
+          minLength: 1
+          maxLength: 32512
+        engine:
+          $ref: "#/components/schemas/ChatEngine"
+        model:
+          type: string
+        scheme_code:
+          type: string
+    ChatEngine:
+      type: string
+      enum: [claude, gpt, deepseek, nvidia, gemini]
+    HelpdeskInput:
+      type: object
+      required: [messages]
+      properties:
+        use_vault_context:
+          type: boolean
+          description: Explicit consent to send own business profile and document excerpts to external AI; never used by public shared bots.
+        messages:
+          type: array
+          minItems: 1
+          maxItems: 10
+          items:
+            $ref: "#/components/schemas/ChatMessage"
+        engine:
+          $ref: "#/components/schemas/ChatEngine"
+        mode:
+          type: string
+          enum: [pembelajaran, profesi, proyek]
+        custom_persona:
+          type: string
+          maxLength: 6000
+        scheme_code:
+          type: string
+          pattern: "^[A-Z]{2}[0-9]{3}$"
+        audience:
+          type: string
+          enum: [bujk, peninjau, asesor, lsbu]
+        explanation_depth:
+          type: string
+          enum: [dasar, praktis, rinci]
+    ChatError:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+        retryAfterSeconds:
+          type: integer
+          minimum: 1
+          description: Local application cooldown when available, also sent in Retry-After.
+        localQuota:
+          type: array
+          description: Present only for a verified owner's local quota rejection; never public or aggregate usage.
+          items:
+            $ref: "#/components/schemas/AiLocalQuota"
+    PublicChatbot:
+      type: object
+      required: [id, name, description, avatar_url, mode, welcome_message]
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+          minLength: 1
+        description:
+          type: string
+        avatar_url:
+          type: string
+        mode:
+          type: string
+        welcome_message:
+          type: string
+    AiReadiness:
+      type: object
+      required: [state, message, checkedAt, recheckAt]
+      properties:
+        state:
+          type: string
+          enum: [configured, limit_indicated, unknown, not_configured]
+        message: { type: string }
+        checkedAt: { type: string, format: date-time }
+        recheckAt: { type: string, format: date-time }
+        localQuota:
+          type: array
+          description: Session owner's application limits only. Absent for anonymous callers. Process-local advisory snapshot, not provider balance or permission to send.
+          items:
+            $ref: "#/components/schemas/AiLocalQuota"
+        diagnostics:
+          type: object
+          description: Admin only. No key, label, raw response, or monetary amounts.
+          required: [reason]
+          properties:
+            reason: { type: string }
+            providerStatus: { type: integer }
+    AiLocalQuota:
+      type: object
+      required: [scope, limit, remaining, retryAfterSeconds, resetAt]
+      properties:
+        scope:
+          type: string
+          enum: [helpdesk, claude, vault]
+        limit: { type: integer, minimum: 1 }
+        remaining: { type: integer, minimum: 0 }
+        retryAfterSeconds: { type: integer, minimum: 0 }
+        resetAt:
+          type: [string, "null"]
+          format: date-time
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+

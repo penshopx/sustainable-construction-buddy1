@@ -1,0 +1,53 @@
+name: Bedah Dokumen real Auth integration
+
+on:
+  push:
+    paths:
+      - "artifacts/api-server/**"
+      - "artifacts/pub-aspekindo/**"
+      - "lib/**"
+      - "pnpm-lock.yaml"
+      - ".migration-backup/supabase/migrations/**"
+      - ".migration-backup/scripts/prepare-supabase-test-project.py"
+      - ".github/workflows/bedah-real-auth.yml"
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  private-document-isolation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - uses: supabase/setup-cli@v1
+        with:
+          version: 3.0.0
+      - name: Install isolated browser
+        run: pnpm --filter @workspace/pub-aspekindo exec playwright install --with-deps chromium
+      - name: Stage all PUB migrations without hosted project metadata
+        run: python3 .migration-backup/scripts/prepare-supabase-test-project.py "$RUNNER_TEMP/bedah-supabase"
+      - name: Start disposable real Supabase
+        run: supabase --workdir "$RUNNER_TEMP/bedah-supabase" start
+      - name: Capture only disposable local service configuration
+        run: |
+          umask 077
+          supabase --workdir "$RUNNER_TEMP/bedah-supabase" status -o json > "$RUNNER_TEMP/bedah-status.json"
+      - name: Real Auth, real PUB UI and API, private synthetic files
+        run: |
+          mkdir -p generated-artifacts/bedah
+          pnpm --filter @workspace/pub-aspekindo test:bedah:integration "$RUNNER_TEMP/bedah-status.json"
+      - name: Stop disposable services and remove local credentials
+        if: always()
+        run: |
+          trap 'rm -f "$RUNNER_TEMP/bedah-status.json"; rm -rf generated-artifacts/bedah' EXIT
+          supabase --workdir "$RUNNER_TEMP/bedah-supabase" stop --no-backup
